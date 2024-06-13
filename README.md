@@ -9,3 +9,9 @@ once all that ^ is done
 
 7. Fix any ui issues
 8. Use framer motion or gsap to update/animate where needed (Nav first!!)
+
+Other on the go changes/notes:
+
+- get consistent img sizes
+- when db connects update the property gallery (currently using local info)
+- when doing properties page, add dynamic routes for individual properties
