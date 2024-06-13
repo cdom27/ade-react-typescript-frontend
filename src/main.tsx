@@ -11,20 +11,18 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Landing />,
-    children: [
-      {
-        path: 'approach',
-        element: <Approach />,
-      },
-      {
-        path: 'vision',
-        element: <Vision />,
-      },
-      {
-        path: 'properties',
-        element: <Properties />,
-      },
-    ],
+  },
+  {
+    path: '/approach',
+    element: <Approach />,
+  },
+  {
+    path: '/vision',
+    element: <Vision />,
+  },
+  {
+    path: '/properties',
+    element: <Properties />,
   },
   //admin routes
 ]);
