@@ -8,7 +8,7 @@ export default {
         'bg-secondary': '#ccc5b9',
         'content-primary': '#1e1d1b',
         'content-secondary': '#403d39',
-        'brand-accent': 'eb5e28',
+        'brand-accent': '#eb5e28',
       },
     },
   },
