@@ -12,9 +12,9 @@ const PageLayout = ({ children, className }: Props) => {
     <>
       <Nav />
       <main
-        className={`bg-bg-primary text-content-primary h-screen px-6 pt-8 pb-20 ${className}`}
+        className={`bg-bg-primary text-content-primary min-h-screen px-6 pt-8 pb-20 ${className}`}
       >
-        {children}{' '}
+        {children}
       </main>
       <Footer />
     </>
