@@ -32,7 +32,12 @@ const Nav = () => {
   return (
     <nav className="flex flex-col bg-bg-primary text-content-primary px-6 pt-8">
       <div className="flex items-center justify-between">
-        <h1 className="text-6xl font-bold">Ade</h1>
+        <NavLink
+          to="/"
+          className="hover:text-brand-accent active:text-brand-accent"
+        >
+          <h1 className="text-6xl font-bold">Ade</h1>
+        </NavLink>
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
