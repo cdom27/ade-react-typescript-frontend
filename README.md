@@ -14,4 +14,3 @@ Other on the go changes/notes:
 
 - get consistent img sizes
 - when db connects update the property gallery (currently using local info)
-- when doing properties page, add dynamic routes for individual properties
