@@ -6,6 +6,7 @@ import Approach from './routes/public/Approach';
 import Vision from './routes/public/Vision';
 import Properties from './routes/public/Properties';
 import './index.css';
+import PropertyDetails from './routes/public/PropertyDetails';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: '/properties',
     element: <Properties />,
+  },
+  {
+    path: '/properties/:propertyName',
+    element: <PropertyDetails />,
   },
   //admin routes
 ]);
