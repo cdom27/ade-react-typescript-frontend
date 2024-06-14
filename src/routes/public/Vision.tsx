@@ -5,9 +5,7 @@ const Vision = () => {
   return (
     <PageLayout>
       <div className="space-y-10 pb-28 px-6">
-        <h2 className="text-2xl font-semibold">
-          Powered by Partnerships - Our Vision
-        </h2>
+        <h1 className="text-2xl font-semibold">Our Vision</h1>
         <img
           src={HeroImg}
           alt="Hilltop view of San Diego"
@@ -18,7 +16,7 @@ const Vision = () => {
         />
       </div>
       <div className="px-6 border-t-2 border-bg-secondary py-8 flex flex-col">
-        <h2 className="text-2xl font-semibold">About Ade</h2>
+        <h2 className="text-2xl font-semibold">History and Background</h2>
         <div className="flex flex-col space-y-6 pt-6">
           <div className="flex flex-col">
             <span className="text-5xl font-bold">20</span>
@@ -33,20 +31,40 @@ const Vision = () => {
             <span className="font-semibold text-lg">Units Built</span>
           </div>
         </div>
-        <div className="flex flex-col space-y-6 pt-12">
-          <p className="font-bold text-xl">
-            Since its founding in 2004, Ade has embodied the vibrant spirit of
-            San Diego, California. Our all-inclusive process ensures that every
-            property we build perfectly captures the essence of charm in the
-            city we call home.
-          </p>
-          <p className="font-medium text-lg">
-            It is our commitment to our clients that truly defines us. Our
-            dedication to achieving exceptional outcomes drives us to go above
-            and beyond to ensure that each client and project receives
-            personalized attention, tailored solutions, and best-in-class
-            service.
-          </p>
+        <div className="flex flex-col space-y-20 pt-12">
+          <div>
+            <h3 className="text-xl font-bold">San Diegan Lead</h3>
+            <p className="font-medium text-lg pt-2">
+              Ade has been a cornerstone in San Diego's construction industry
+              for over two decades. Founded with a vision to transform the
+              residential landscape of San Diego, our company prides itself on
+              delivering homes and apartments that are not only aesthetically
+              pleasing but also built to last.
+              <br />
+              <br />
+              Our journey began with a small team of dedicated professionals who
+              shared a common passion for excellence in home building. Over the
+              years, we have grown into a renowned name in the industry,
+              recognized for our commitment to quality, innovation, and customer
+              satisfaction.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">Core Values and Mission</h3>
+            <p className="font-medium text-lg pt-2">
+              Our core values revolve around integrity, innovation, and
+              sustainability. We believe in building homes that reflect our
+              dedication to quality and our respect for the environment. Our
+              mission is to create living spaces that not only meet but exceed
+              the expectations of our clients.
+              <br />
+              <br />
+              We strive to incorporate the latest building technologies and
+              sustainable practices in all our projects, ensuring that each home
+              and apartment we build is a testament to our commitment to
+              excellence and environmental stewardship.
+            </p>
+          </div>
         </div>
       </div>
     </PageLayout>
