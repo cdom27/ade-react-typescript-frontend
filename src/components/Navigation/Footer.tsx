@@ -10,8 +10,8 @@ const links = [
     name: 'Approach',
   },
   {
-    href: '/properties',
-    name: 'Properties',
+    href: '/homes',
+    name: 'Homes',
   },
   {
     href: '/contact',

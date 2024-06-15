@@ -4,9 +4,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Landing from './routes/public/Landing';
 import Approach from './routes/public/Approach';
 import Vision from './routes/public/Vision';
-import Properties from './routes/public/Properties';
+import Homes from './routes/public/Homes';
+import HomeDetails from './routes/public/HomeDetails';
 import './index.css';
-import PropertyDetails from './routes/public/PropertyDetails';
 
 const router = createBrowserRouter([
   {
@@ -22,12 +22,12 @@ const router = createBrowserRouter([
     element: <Vision />,
   },
   {
-    path: '/properties',
-    element: <Properties />,
+    path: '/homes',
+    element: <Homes />,
   },
   {
-    path: '/properties/:propertyId',
-    element: <PropertyDetails />,
+    path: '/homes/:homeId',
+    element: <HomeDetails />,
   },
   //admin routes
 ]);

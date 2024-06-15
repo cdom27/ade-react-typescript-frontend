@@ -5,10 +5,6 @@ import close from '../../assets/close.svg';
 
 const links = [
   {
-    href: '/',
-    name: 'Home',
-  },
-  {
     href: '/vision',
     name: 'Vision',
   },
@@ -17,8 +13,8 @@ const links = [
     name: 'Approach',
   },
   {
-    href: '/properties',
-    name: 'Properties',
+    href: '/homes',
+    name: 'Homes',
   },
   {
     href: '/contact',

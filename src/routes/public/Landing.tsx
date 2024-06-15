@@ -61,19 +61,19 @@ const Landing = () => {
         img={InfoImg2}
       />
       <div className="px-6 pt-28 pb-8 space-y-4 flex flex-col">
-        <h2 className="text-2xl font-semibold">Newest Properties</h2>
+        <h2 className="text-2xl font-semibold">Newest homes</h2>
         <section className="flex flex-col">
           <div className="flex flex-col">
             <div className="flex flex-col">
               <GalleryImgCard
                 img={GImg1}
                 title="767 Claiborne Sq, La Jolla, CA 92037"
-                link="/properties"
+                link="/homes"
               />
               <GalleryImgCard
                 img={GImg2}
                 title="2585 Calle Del Oro, La Jolla, CA 92037"
-                link="/properties"
+                link="/homes"
               />
             </div>
             <div className="flex flex-col">
@@ -81,18 +81,18 @@ const Landing = () => {
                 <GalleryImgCard
                   img={GImg3}
                   title="3699 Mount Alvarez Ave, San Diego, CA 92111"
-                  link="/properties"
+                  link="/homes"
                 />
                 <GalleryImgCard
                   img={GImg4}
                   title="2175 Calle Serena, San Diego, CA 92132"
-                  link="/properties"
+                  link="/homes"
                 />
               </div>
               <GalleryImgCard
                 img={GImg5}
                 title="13606 Bodie Ct, San Diego, CA 92129"
-                link="/properties"
+                link="/homes"
               />
             </div>
           </div>
@@ -100,17 +100,17 @@ const Landing = () => {
             <GalleryImgCard
               img={GImg6}
               title="5697 Yerba Anita Dr, San Diego, CA 92115"
-              link="/properties"
+              link="/homes"
             />
             <GalleryImgCard
               img={GImg7}
               title="3329 Orange Ave, San Diego, CA 92104"
-              link="/properties"
+              link="/homes"
             />
           </div>
         </section>
-        <NavLink to="/properties" className="font-bold text-lg underline">
-          View All Properties
+        <NavLink to="/homes" className="font-bold text-lg underline">
+          View All homes
         </NavLink>
       </div>
     </PageLayout>
