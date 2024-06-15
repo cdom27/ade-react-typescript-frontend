@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     element: <Properties />,
   },
   {
-    path: '/properties/:propertyName',
+    path: '/properties/:propertyId',
     element: <PropertyDetails />,
   },
   //admin routes
