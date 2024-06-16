@@ -1,9 +1,8 @@
-1. Basic styling + ui for landing, vision, approach, properties
-2. Property Search
-3. Client form functions
-4. Connect to spring/kotlin backend
-5. Create admin basic styling + ui for crud on properties and managing client reqs
-6. Double check db/backend
+1. Individual property pages
+2. Client form functions
+3. Connect to spring/kotlin backend
+4. Create admin basic styling + ui for crud on properties and managing client reqs
+5. Double check db/backend
 
 once all that ^ is done
 
