@@ -1,11 +1,4 @@
-// import { ReactNode } from 'react';
-
 import { NavLink } from 'react-router-dom';
-
-// interface Props {
-//     children: ReactNode;
-//     className?: string;
-// }
 
 interface Props {
   header: string;
