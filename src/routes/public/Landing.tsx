@@ -1,18 +1,11 @@
 import PageLayout from '../../layouts/PageLayout';
 import { NavLink } from 'react-router-dom';
+import Gallery from '../../components/Gallery/Gallery';
 import HeroImg from '../../assets/images/p1.jpg';
 import InfoImg1 from '../../assets/images/p2.jpg';
 import Img from '../../assets/images/p3.jpg';
 import InfoImg2 from '../../assets/images/p4.jpg';
 import InfoCard from '../../components/InfoCard';
-import GImg1 from '../../assets/images/g1.jpg';
-import GImg2 from '../../assets/images/g2.jpg';
-import GImg3 from '../../assets/images/g3.jpg';
-import GImg4 from '../../assets/images/g4.jpg';
-import GImg5 from '../../assets/images/g5.jpg';
-import GImg6 from '../../assets/images/g6.jpg';
-import GImg7 from '../../assets/images/g7.jpg';
-import GalleryImgCard from '../../components/GalleryImgCard';
 
 const Landing = () => {
   return (
@@ -61,56 +54,10 @@ const Landing = () => {
         img={InfoImg2}
       />
       <div className="px-6 pt-28 pb-8 space-y-4 flex flex-col">
-        <h2 className="text-2xl font-semibold">Newest homes</h2>
-        <section className="flex flex-col">
-          <div className="flex flex-col">
-            <div className="flex flex-col">
-              <GalleryImgCard
-                img={GImg1}
-                title="767 Claiborne Sq, La Jolla, CA 92037"
-                link="/homes"
-              />
-              <GalleryImgCard
-                img={GImg2}
-                title="2585 Calle Del Oro, La Jolla, CA 92037"
-                link="/homes"
-              />
-            </div>
-            <div className="flex flex-col">
-              <div className="flex flex-col">
-                <GalleryImgCard
-                  img={GImg3}
-                  title="3699 Mount Alvarez Ave, San Diego, CA 92111"
-                  link="/homes"
-                />
-                <GalleryImgCard
-                  img={GImg4}
-                  title="2175 Calle Serena, San Diego, CA 92132"
-                  link="/homes"
-                />
-              </div>
-              <GalleryImgCard
-                img={GImg5}
-                title="13606 Bodie Ct, San Diego, CA 92129"
-                link="/homes"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <GalleryImgCard
-              img={GImg6}
-              title="5697 Yerba Anita Dr, San Diego, CA 92115"
-              link="/homes"
-            />
-            <GalleryImgCard
-              img={GImg7}
-              title="3329 Orange Ave, San Diego, CA 92104"
-              link="/homes"
-            />
-          </div>
-        </section>
+        <h2 className="text-2xl font-semibold">Newly Available Homes</h2>
+        <Gallery />
         <NavLink to="/homes" className="font-bold text-lg underline">
-          View All homes
+          View All Homes
         </NavLink>
       </div>
     </PageLayout>
