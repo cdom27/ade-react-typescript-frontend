@@ -1,4 +1,4 @@
-export const properties = [
+const homes = [
   {
     pid: 48181220,
     address: {
@@ -12,7 +12,7 @@ export const properties = [
     cost: 899999,
     bedrooms: 5,
     bathrooms: 2.5,
-    property_size: '1,992 sqft',
+    property_size: 1992,
     lot_size: '4,522 sqft',
     overview: `Welcome to your dream home in the charming Nestor community, just moments from the picturesque Imperial Beach. This newly remodeled gem boasts 5 bedrooms, 2.5 bathrooms, and spans a comfortable 2000 square feet, offering ample space for your family's needs. Step inside and be greeted by the epitome of modern luxury. The entire home has been adorned with high-end finishes, including new luxury vinyl plank flooring that exudes both elegance and durability. The heart of this home lies in its stunning kitchen, where every detail has been carefully curated. New cabinets provide ample storage space, while quartz countertops offer both style and functionality. Equipped with top-of-the-line stainless steel appliances, this kitchen is a chef's paradise, ready to inspire culinary creations. The bathrooms have been tastefully remodeled, boasting elegant finishes that elevate every moment of self-care. Whether you're unwinding in the master suite or refreshing in the guest bath, every corner exudes sophistication and comfort. Step outside into your expansive yard, where lush turf creates the perfect oasis for both pets and family gatherings. With ample space for outdoor activities and entertaining, this yard is destined to become your personal sanctuary. Located just minutes from the beach, Silver Strand, and Coronado, this home offers unparalleled access to Southern California's most coveted coastal destinations. Additionally, its convenient proximity to the freeway ensures effortless travel to nearby attractions. With shopping, dining, and nightlife options just close by, this home truly offers the best of both worlds: a tranquil retreat nestled in the heart of a vibrant community. Don't miss your chance to make this exquisite property your own slice of paradise.`,
     home_type: 'House',
@@ -88,7 +88,7 @@ export const properties = [
     cost: 1625000,
     bedrooms: 5,
     bathrooms: 4.5,
-    property_size: '5,674 sqft',
+    property_size: 5674,
     lot_size: '0.39 Acres',
     overview:
       'Experience ocean front living at its finest from this prime property located on perhaps the most coveted street in La Jolla. Modernist in style, blending raw concrete, teak wood, metal and glass converging with carefully curated architectural artifacts, create this one-of-a-kind residence.  Offering an intimate relationship with the ocean, the positioning on the bluff could never be duplicated. Expansive south coast views and beyond along with year-round sunsets and accessible sandy coves below, deliver both a sublime living experience and a seamless connection to the natural marine environment.',
@@ -160,3 +160,5 @@ export const properties = [
     },
   },
 ];
+
+export default homes;
