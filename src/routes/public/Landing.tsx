@@ -54,7 +54,7 @@ const Landing = () => {
         img={InfoImg2}
       />
       <div className="px-6 pt-28 pb-8 space-y-4 flex flex-col">
-        <h2 className="text-2xl font-semibold">Newly Available Homes</h2>
+        <h2 className="text-2xl font-semibold">Home Spotlight</h2>
         <Gallery />
         <NavLink to="/homes" className="font-bold text-lg underline">
           View All Homes
