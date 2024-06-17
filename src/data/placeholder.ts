@@ -1,3 +1,18 @@
+import Img1 from '../assets/images/48181220/48181220_0.webp';
+import Img2 from '../assets/images/48181220/48181220_1.webp';
+import Img3 from '../assets/images/48181220/48181220_2.webp';
+import Img4 from '../assets/images/48181220/48181220_3.webp';
+import Img5 from '../assets/images/48181220/48181220_4.webp';
+import Img6 from '../assets/images/48181220/48181220_5.webp';
+import Img7 from '../assets/images/48181220/48181220_6.webp';
+import Img8 from '../assets/images/48181220/48181220_7.webp';
+import Img9 from '../assets/images/48181220/48181220_8.webp';
+import Img10 from '../assets/images/48181220/48181220_9.webp';
+import Img11 from '../assets/images/48181220/48181220_10.webp';
+import Img12 from '../assets/images/48181220/48181220_11.webp';
+import Img13 from '../assets/images/48181220/48181220_12.webp';
+import Img14 from '../assets/images/48181220/48181220_13.webp';
+
 const homes = [
   {
     pid: 48181220,
@@ -14,7 +29,7 @@ const homes = [
     bathrooms: 2.5,
     property_size: 1992,
     lot_size: '4,522 sqft',
-    overview: `Welcome to your dream home in the charming Nestor community, just moments from the picturesque Imperial Beach. This newly remodeled gem boasts 5 bedrooms, 2.5 bathrooms, and spans a comfortable 2000 square feet, offering ample space for your family's needs. Step inside and be greeted by the epitome of modern luxury. The entire home has been adorned with high-end finishes, including new luxury vinyl plank flooring that exudes both elegance and durability. The heart of this home lies in its stunning kitchen, where every detail has been carefully curated. New cabinets provide ample storage space, while quartz countertops offer both style and functionality. Equipped with top-of-the-line stainless steel appliances, this kitchen is a chef's paradise, ready to inspire culinary creations. The bathrooms have been tastefully remodeled, boasting elegant finishes that elevate every moment of self-care. Whether you're unwinding in the master suite or refreshing in the guest bath, every corner exudes sophistication and comfort. Step outside into your expansive yard, where lush turf creates the perfect oasis for both pets and family gatherings. With ample space for outdoor activities and entertaining, this yard is destined to become your personal sanctuary. Located just minutes from the beach, Silver Strand, and Coronado, this home offers unparalleled access to Southern California's most coveted coastal destinations. Additionally, its convenient proximity to the freeway ensures effortless travel to nearby attractions. With shopping, dining, and nightlife options just close by, this home truly offers the best of both worlds: a tranquil retreat nestled in the heart of a vibrant community. Don't miss your chance to make this exquisite property your own slice of paradise.`,
+    overview: `Welcome to your dream home in the charming Nestor community, moments from picturesque Imperial Beach. This newly remodeled 5-bedroom, 2.5-bathroom gem spans 2000 square feet, featuring high-end finishes like luxury vinyl plank flooring. The stunning kitchen, with new cabinets, quartz countertops, and top-of-the-line stainless steel appliances, is a chef's paradise. Tastefully remodeled bathrooms add elegance and comfort, while the expansive yard with lush turf is perfect for pets and family gatherings. Located minutes from the beach, Silver Strand, and Coronado, with easy freeway access, this home offers a tranquil retreat in a vibrant community. Don't miss your chance to own this slice of paradise.`,
     home_type: 'House',
     year_built: 1980,
     whats_special: [
@@ -28,9 +43,20 @@ const homes = [
       'Lush turf',
     ],
     photo_gallery: [
-      'https://photos.zillowstatic.com/fp/1.jpg',
-      'https://photos.zillowstatic.com/fp/2.jpg',
-      'https://photos.zillowstatic.com/fp/3.jpg',
+      Img1,
+      Img2,
+      Img3,
+      Img4,
+      Img5,
+      Img6,
+      Img7,
+      Img8,
+      Img9,
+      Img10,
+      Img11,
+      Img12,
+      Img13,
+      Img14,
     ],
     facts: {
       interior: {
@@ -103,9 +129,20 @@ const homes = [
       'Private beach access',
     ],
     photo_gallery: [
-      'https://photos.zillowstatic.com/fp/1.jpg',
-      'https://photos.zillowstatic.com/fp/2.jpg',
-      'https://photos.zillowstatic.com/fp/3.jpg',
+      Img1,
+      Img2,
+      Img3,
+      Img4,
+      Img5,
+      Img6,
+      Img7,
+      Img8,
+      Img9,
+      Img10,
+      Img11,
+      Img12,
+      Img13,
+      Img14,
     ],
     facts: {
       interior: {
