@@ -14,8 +14,8 @@ const Landing = () => {
         <img
           src={HeroImg}
           alt="3 story modern home"
-          loading="lazy"
-          decoding="async"
+          loading="eager"
+          decoding="auto"
           role="img"
           aria-label="3 story modern home"
         />

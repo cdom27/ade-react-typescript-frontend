@@ -31,7 +31,7 @@ const HomeDetails = () => {
           src={home.photo_gallery[0]}
           alt={`Image of ${home.address.street}`}
           loading="eager"
-          decoding="async"
+          decoding="auto"
           role="img"
           aria-label={`Image of ${home.address.street}`}
         />

@@ -25,8 +25,8 @@ const HomeCard = ({
         <img
           src={imgSrc}
           alt={'Image for: ' + address}
-          loading="lazy"
-          decoding="async"
+          loading="eager"
+          decoding="auto"
           role="img"
           aria-label={'Image for: ' + address}
         />

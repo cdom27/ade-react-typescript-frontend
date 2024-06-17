@@ -10,7 +10,7 @@ const Approach = () => {
           src={HeroImg}
           alt="Hilltop view of San Diego"
           loading="eager"
-          decoding="async"
+          decoding="auto"
           role="img"
           aria-label="Hilltop view of San Diego"
         />
