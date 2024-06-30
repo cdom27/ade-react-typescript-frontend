@@ -7,6 +7,7 @@ import Vision from './routes/public/Vision';
 import Homes from './routes/public/Homes';
 import HomeDetails from './routes/public/HomeDetails';
 import './index.css';
+import Contact from './routes/public/Contact';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: '/homes/:homeId',
     element: <HomeDetails />,
+  },
+  {
+    path: '/contact',
+    element: <Contact />,
   },
   //admin routes
 ]);
