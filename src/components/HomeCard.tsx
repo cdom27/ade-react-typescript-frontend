@@ -1,29 +1,22 @@
 import { NavLink } from 'react-router-dom';
+import { HomeCardDTO } from '../types/api';
 
-interface Props {
-  imgSrc: string;
-  link: string;
-  cost: number;
-  address: string;
-  bedCount: number;
-  bathCount: number;
-  squareFeet: number;
-}
+interface Props extends HomeCardDTO {}
 
 const HomeCard = ({
-  imgSrc,
-  link,
+  id,
+  mainImgUrl,
   cost,
   address,
-  bedCount,
-  bathCount,
-  squareFeet,
+  bedrooms,
+  bathrooms,
+  lotSize,
 }: Props) => {
   return (
     <div className="flex flex-col bg-bg-secondary bg-opacity-40 p-6">
-      <NavLink to={link} className="text-md font-semibold underline">
+      <NavLink to={`/homes/${id}`} className="text-md font-semibold underline">
         <img
-          src={imgSrc}
+          src={mainImgUrl}
           alt={'Image for: ' + address}
           loading="eager"
           decoding="auto"
@@ -36,18 +29,17 @@ const HomeCard = ({
       <h3 className="text-lg font-medium underline pt-2">{address}</h3>
       <ul className="text-md font-medium pt-2">
         <li>
-          Beds: <span className="font-bold">{bedCount.toLocaleString()}</span>
+          Beds: <span className="font-bold">{bedrooms.toLocaleString()}</span>
         </li>
         <li>
-          Baths: <span className="font-bold">{bathCount.toLocaleString()}</span>
+          Baths: <span className="font-bold">{bathrooms.toLocaleString()}</span>
         </li>
         <li>
-          Sq. Feet:{' '}
-          <span className="font-bold">{squareFeet.toLocaleString()}</span>
+          Property Size: <span className="font-bold">{lotSize}</span>
         </li>
       </ul>
       <NavLink
-        to={link}
+        to={`/homes/${id}`}
         className="font-medium text-bg-primary text-xl bg-brand-accent px-8 py-3 w-full text-center mt-8"
       >
         Get Details
