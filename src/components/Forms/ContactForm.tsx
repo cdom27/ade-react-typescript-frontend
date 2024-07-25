@@ -12,6 +12,7 @@ interface ContactFormValues {
 
 const phoneRegExp = /^(\d{3})-(\d{3})-(\d{4})$/;
 
+//Define validation schema for form
 const ContactSchema = Yup.object().shape({
   name: Yup.string().required('Name is required'),
   email: Yup.string().email('Invalid email').required('Email is required'),
@@ -21,7 +22,8 @@ const ContactSchema = Yup.object().shape({
   message: Yup.string().required('Message is required'),
 });
 
-const ContactForm: React.FC = () => {
+const ContactForm = () => {
+  //Define initial values for form
   const initialValues: ContactFormValues = {
     name: '',
     email: '',
@@ -29,6 +31,7 @@ const ContactForm: React.FC = () => {
     message: '',
   };
 
+  //post to public api endpoint
   const handleSubmit = async (
     values: ContactFormValues,
     { setSubmitting, resetForm }: any
