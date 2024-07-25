@@ -3,12 +3,14 @@ import { NavLink, useParams } from 'react-router-dom';
 import PageLayout from '../../layouts/PageLayout';
 import api from '../../api/axios';
 import { HomeDetailsDTO } from '../../types/api';
+import VisitRequestModalForm from '../../components/Forms/VisitRequestModalForm';
 
 const HomeDetails = () => {
   const { homeId } = useParams<{ homeId: string }>();
   const [home, setHome] = useState<HomeDetailsDTO | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const fetchHomeDetails = async () => {
@@ -60,12 +62,19 @@ const HomeDetails = () => {
             <li>Livable area: {home.livableAreaSize}</li>
             <li>Lot size: {home.lotSize}</li>
             <li>
-              <button className="text-2xl bg-brand-accent px-8 py-3 w-full text-center mt-8 text-bg-primary">
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="text-2xl bg-brand-accent px-8 py-3 w-full text-center mt-8 text-bg-primary"
+              >
                 Request a Tour
               </button>
             </li>
           </ul>
         </div>
+        <VisitRequestModalForm
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
         <div className="space-y-12 p-6 border-b-2 border-bg-secondary">
           <h1 className="text-3xl font-semibold">Home Overview</h1>
           <div className="space-y-6">
