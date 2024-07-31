@@ -64,7 +64,7 @@ const Nav = () => {
               onClick={() => setIsOpen(false)}
               className={({ isActive }) =>
                 `${
-                  isActive ? 'text-lime-700' : 'text-content'
+                  isActive ? 'text-lime-700 border-lime-700' : 'text-content'
                 } font-fraktion_reg flex items-center justify-between text-xl border-[1px] rounded-full px-6 py-2 border-content`
               }
             >
