@@ -53,7 +53,7 @@ const VideoHero = ({ videoSources, posterSource }: VideoHeroProps) => {
   const { webm, mp4 } = getVideoSources();
 
   return (
-    <div className="overflow-hidden bg-violet-300 h-[300px]">
+    <div className="overflow-hidden h-[400px]">
       <video
         className="h-full object-cover"
         autoPlay
