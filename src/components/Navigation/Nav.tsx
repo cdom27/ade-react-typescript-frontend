@@ -25,7 +25,7 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-primary border-content border-[1px] border-opacity-20 fixed top-4 left-4 right-4 z-50 py-4 px-8 rounded-md text-content">
+    <nav className="bg-primary border-content border-[1px] border-opacity-20 fixed top-4 left-6 right-6 z-50 py-4 px-8 rounded-md text-content">
       <div className="flex items-center justify-between">
         <NavLink to="/">
           <h1 className="font-editorial_ul_italic text-4xl">Ade</h1>
