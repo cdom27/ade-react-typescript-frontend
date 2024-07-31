@@ -14,9 +14,7 @@ const PageLayout = ({ children, className }: Props) => {
       <ScrollRestoration />
       <Nav />
       <main
-        className={`bg-bg-primary text-content-primary min-h-screen pt-8 pb-20 ${
-          className || ''
-        }`}
+        className={`bg-primary text-content min-h-screen ${className || ''}`}
       >
         {children}
       </main>
