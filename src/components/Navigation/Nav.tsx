@@ -1,24 +1,23 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import open from '../../assets/open.svg';
-import close from '../../assets/close.svg';
+import { Arrow } from '../Icons';
 
 const links = [
   {
-    href: '/vision',
-    name: 'Vision',
+    href: '/homes',
+    name: 'HOMES',
+  },
+  {
+    href: '/services',
+    name: 'SERVICES',
+  },
+  {
+    href: '/About',
+    name: 'ABOUT',
   },
   {
     href: '/approach',
-    name: 'Approach',
-  },
-  {
-    href: '/homes',
-    name: 'Homes',
-  },
-  {
-    href: '/contact',
-    name: 'Contact',
+    name: 'APPROACH',
   },
 ];
 
@@ -26,48 +25,53 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex flex-col bg-bg-primary text-content-primary px-6 pt-8">
+    <nav className="bg-primary border-content border-[1px] border-opacity-20 fixed top-4 left-4 right-4 z-50 py-4 px-8 rounded-md text-content">
       <div className="flex items-center justify-between">
-        <NavLink
-          to="/"
-          className="hover:text-brand-accent active:text-brand-accent"
-        >
-          <h1 className="text-6xl font-bold">Ade</h1>
+        <NavLink to="/">
+          <h1 className="font-editorial_ul_italic text-4xl">Ade</h1>
         </NavLink>
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="w-[32px] flex justify-center"
+          className="font-fraktion_reg text-sm"
         >
-          {isOpen ? (
-            <img src={close} alt="Close menu" />
-          ) : (
-            <img src={open} alt="Open menu" />
-          )}
+          {isOpen ? 'CLOSE' : 'MENU'}
         </button>
       </div>
-      <h3 className="text-2xl font-bold">Modern Homes</h3>
 
       {/* Open mobile nav */}
       {isOpen && (
-        <ul className="flex flex-col mt-4 mb-12 text-3xl space-y-2">
+        <ul className="flex flex-col mt-4 mb-12 text-2xl gap-y-4 border-t-[1px] border-content pt-4">
           {links.map((link) => (
-            <li key={link.href}>
+            <li key={link.href} className="border-b-[1px] border-content pb-4">
               <NavLink
                 to={link.href}
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
                   `${
-                    isActive
-                      ? 'text-content-primary'
-                      : 'text-bg-secondary hover:text-brand-accent active:text-brand-accent'
-                  } font-medium`
+                    isActive ? 'text-lime-700' : 'text-content'
+                  } font-fraktion_reg flex items-center justify-between`
                 }
               >
-                {link.name}
+                <span>{link.name}</span>
+                <Arrow className="stroke-content size-4" />
               </NavLink>
             </li>
           ))}
+          <li>
+            <NavLink
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `${
+                  isActive ? 'text-lime-700' : 'text-content'
+                } font-fraktion_reg flex items-center justify-between text-xl border-[1px] rounded-full px-6 py-2 border-content`
+              }
+            >
+              <span>GET IN TOUCH</span>
+              <Arrow className="stroke-content size-4 rotate-[-45deg]" />
+            </NavLink>
+          </li>
         </ul>
       )}
     </nav>
