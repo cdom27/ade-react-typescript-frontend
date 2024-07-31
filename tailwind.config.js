@@ -15,6 +15,9 @@ export default {
         editorial_ul_italic: ['editorial_ul_italic'],
         fraktion_reg: ['fraktion_reg'],
       },
+      backgroundImage: {
+        leafs: "url('/src/assets/images/leafs.webp')",
+      },
     },
   },
   plugins: [],
