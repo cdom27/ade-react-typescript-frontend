@@ -4,11 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        'bg-primary': '#fffcf2',
-        'bg-secondary': '#ccc5b9',
-        'content-primary': '#1e1d1b',
-        'content-secondary': '#403d39',
-        'brand-accent': '#eb5e28',
+        primary: '#FDFDF1',
+        content: '#39442B',
+        accent: '#FAFE86',
+      },
+      fontFamily: {
+        haas_md: ['haas_md'],
+        haas_roman: ['haas_roman'],
+        editorial_ul: ['editorial_ul'],
+        editorial_ul_italic: ['editorial_ul_italic'],
+        fraktion_reg: ['fraktion_reg'],
       },
     },
   },
