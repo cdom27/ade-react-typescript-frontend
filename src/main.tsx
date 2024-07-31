@@ -2,25 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Landing from './routes/public/Landing';
-import Approach from './routes/public/Approach';
-import Vision from './routes/public/Vision';
 import Homes from './routes/public/Homes';
 import HomeDetails from './routes/public/HomeDetails';
 import './index.css';
-import Contact from './routes/public/Contact';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Landing />,
-  },
-  {
-    path: '/approach',
-    element: <Approach />,
-  },
-  {
-    path: '/vision',
-    element: <Vision />,
   },
   {
     path: '/homes',
@@ -30,11 +19,6 @@ const router = createBrowserRouter([
     path: '/homes/:homeId',
     element: <HomeDetails />,
   },
-  {
-    path: '/contact',
-    element: <Contact />,
-  },
-  //admin routes
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
