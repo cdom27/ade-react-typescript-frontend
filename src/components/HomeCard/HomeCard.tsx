@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { HomeCardDTO } from '../types/api';
+import { HomeCardDTO } from '../../types/api';
 
 interface Props extends HomeCardDTO {}
 
