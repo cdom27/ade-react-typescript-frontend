@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { NavLink } from 'react-router-dom';
 import { Arrow } from '../Icons';
+import NavLinkButton from '../NavLinkButton';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -151,18 +152,13 @@ const Nav = () => {
           </li>
         ))}
         <li ref={(el) => (listItemRef.current[links.length] = el)}>
-          <NavLink
+          <NavLinkButton
+            className="text-accent hover:text-content border-none bg-content hover:bg-accent active:bg-accent text-lg px-6 py-2 mt-8"
+            text="GET IN TOUCH"
             to="/contact"
-            onClick={() => setIsOpen(false)}
-            className={({ isActive }) =>
-              `${
-                isActive ? 'text-lime-700 border-lime-700' : 'text-content'
-              } font-fraktion_reg flex items-center justify-between text-lg border-[1px] rounded-full px-6 py-2 border-content`
-            }
-          >
-            <span>GET IN TOUCH</span>
-            <Arrow className="stroke-content size-4 rotate-[-45deg]" />
-          </NavLink>
+            bgClasses="bg-accent"
+            arrowClasses="stroke-accent group-hover:stroke-content rotate-[-45deg]"
+          />
         </li>
       </ul>
     </nav>
