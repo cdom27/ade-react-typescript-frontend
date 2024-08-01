@@ -37,9 +37,21 @@ const VideoHero = ({ videoSources, posterSource }: VideoHeroProps) => {
     event: React.SyntheticEvent<HTMLVideoElement, Event>
   ) => {
     const video = event.target as HTMLVideoElement;
-    setTimeout(() => {
-      video.play();
-    }, 5000);
+
+    const playPromise = video.play();
+
+    // Check playPromise & handle error
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          setTimeout(() => {
+            video.play();
+          }, 5000);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
   };
 
   const getVideoSources = () => {
