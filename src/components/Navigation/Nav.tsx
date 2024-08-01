@@ -37,6 +37,7 @@ const Nav = () => {
   const lastScrollY = useRef(0);
   const tl = useRef<gsap.core.Timeline | null>(null);
 
+  // Hide/reveal floating nav based on scroll position
   useEffect(() => {
     if (navRef.current) {
       // GSAP timeline for scroll-triggered animation
@@ -67,6 +68,7 @@ const Nav = () => {
     }
   }, []);
 
+  // Manage opening animation for the nav
   useEffect(() => {
     if (menuRef.current && listItemRef.current.every((item) => item !== null)) {
       // GSAP timeline for menu extension and retraction
@@ -93,9 +95,6 @@ const Nav = () => {
       if (isOpen) {
         menuTl.play();
         itemsTl.play();
-      } else {
-        itemsTl.reverse();
-        menuTl.reverse();
       }
 
       // Cleanup
