@@ -57,7 +57,7 @@ export const Minus = ({ className }: IconsProps) => {
     >
       <path
         d="M1 1H15"
-        strokeWidth="1"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
