@@ -4,8 +4,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Landing from './routes/public/Landing';
 import Homes from './routes/public/Homes';
 import HomeDetails from './routes/public/HomeDetails';
-import './index.css';
 import About from './routes/public/About';
+import Services from './routes/public/Services';
+import './index.css';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: '/about',
     element: <About />,
+  },
+  {
+    path: '/services',
+    element: <Services />,
   },
 ]);
 
