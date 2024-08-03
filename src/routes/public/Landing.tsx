@@ -176,8 +176,6 @@ const Landing = () => {
         <a href="mailto:hey@adehomes.com" className="underline block pt-2">
           hey@adehomes.com
         </a>
-
-        {/* TODO: Add contact form */}
         <ContactForm />
       </section>
 
