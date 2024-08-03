@@ -7,6 +7,7 @@ import HomeDetails from './routes/public/HomeDetails';
 import About from './routes/public/About';
 import Services from './routes/public/Services';
 import Approach from './routes/public/Approach';
+import Contact from './routes/public/Contact';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: '/approach',
     element: <Approach />,
+  },
+  {
+    path: '/contact',
+    element: <Contact />,
   },
 ]);
 
