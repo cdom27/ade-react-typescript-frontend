@@ -6,4 +6,5 @@
 6. Remake approach page
 7. Remake footer
 
-- Add GSAP as I go
+- Add Text reveal & img transform at the end of each page
+- Add Links (2) to post on FAQ section
