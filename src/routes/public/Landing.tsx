@@ -19,7 +19,7 @@ const Landing = () => {
     },
   };
 
-  const posterSource = `https://db36hfj0unq27.cloudfront.net/landing-hero-poster.webp`;
+  const posterSource = `https://db36hfj0unq27.cloudfront.net/regular-content/landing-hero-poster.webp`;
 
   return (
     <PageLayout>

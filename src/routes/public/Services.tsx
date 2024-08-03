@@ -15,7 +15,7 @@ const Services = () => {
     },
   };
 
-  const posterSource = `https://db36hfj0unq27.cloudfront.net/services-hero-poster.webp`;
+  const posterSource = `https://db36hfj0unq27.cloudfront.net/regular-content/services-hero-poster.webp`;
   return (
     <PageLayout>
       <section className="relative">

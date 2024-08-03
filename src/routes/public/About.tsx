@@ -15,7 +15,7 @@ const About = () => {
     },
   };
 
-  const posterSource = `https://db36hfj0unq27.cloudfront.net/about-hero-poster.webp`;
+  const posterSource = `https://db36hfj0unq27.cloudfront.net/regular-content/about-hero-poster.webp`;
   return (
     <PageLayout>
       <section className="relative">
