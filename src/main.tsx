@@ -6,6 +6,7 @@ import Homes from './routes/public/Homes';
 import HomeDetails from './routes/public/HomeDetails';
 import About from './routes/public/About';
 import Services from './routes/public/Services';
+import Approach from './routes/public/Approach';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: '/services',
     element: <Services />,
+  },
+  {
+    path: '/approach',
+    element: <Approach />,
   },
 ]);
 
