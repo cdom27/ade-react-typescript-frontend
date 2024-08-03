@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Arrow } from './Icons';
+import { Arrow } from '../Icons';
 
 interface NavLinkButtonProps {
   className: string;
