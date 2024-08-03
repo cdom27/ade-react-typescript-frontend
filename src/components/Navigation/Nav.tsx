@@ -4,27 +4,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { NavLink } from 'react-router-dom';
 import { Arrow } from '../Icons';
 import NavLinkButton from './NavLinkButton';
+import { links } from '../../utils/navUtils';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const links = [
-  {
-    href: '/homes',
-    name: 'HOMES',
-  },
-  {
-    href: '/services',
-    name: 'SERVICES',
-  },
-  {
-    href: '/About',
-    name: 'ABOUT',
-  },
-  {
-    href: '/approach',
-    name: 'APPROACH',
-  },
-];
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
