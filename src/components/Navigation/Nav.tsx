@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { NavLink } from 'react-router-dom';
 import { Arrow } from '../Icons';
-import NavLinkButton from '../NavLinkButton';
+import NavLinkButton from './NavLinkButton';
 
 gsap.registerPlugin(ScrollTrigger);
 
