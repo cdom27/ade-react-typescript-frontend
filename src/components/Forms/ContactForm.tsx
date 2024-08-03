@@ -1,7 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import api from '../../api/axios';
+import { phoneRegExp, formatPhoneNumber } from '../../utils/phoneUtils';
+import Input from './FormUI/Input';
+import SubmitButton from './FormUI/SubmitButton';
 
 interface ContactFormValues {
   name: string;
@@ -9,8 +12,6 @@ interface ContactFormValues {
   phoneNumber: string;
   message: string;
 }
-
-const phoneRegExp = /^(\d{3})-(\d{3})-(\d{4})$/;
 
 //Define validation schema for form
 const ContactSchema = Yup.object().shape({
@@ -48,18 +49,6 @@ const ContactForm = () => {
     setSubmitting(false);
   };
 
-  const formatPhoneNumber = (value: string) => {
-    const phoneNumber = value.replace(/[^\d]/g, '');
-    const phoneNumberLength = phoneNumber.length;
-    if (phoneNumberLength < 4) return phoneNumber;
-    if (phoneNumberLength < 7)
-      return `${phoneNumber.slice(0, 3)}-${phoneNumber.slice(3)}`;
-    return `${phoneNumber.slice(0, 3)}-${phoneNumber.slice(
-      3,
-      6
-    )}-${phoneNumber.slice(6, 10)}`;
-  };
-
   return (
     <Formik
       initialValues={initialValues}
@@ -67,99 +56,45 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
     >
       {({ isSubmitting, setFieldValue }) => (
-        <Form className="space-y-4">
-          <div>
-            <label htmlFor="name" className="font-semibold text-lg">
-              Name
-            </label>
-            <Field
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Full name"
-              autoComplete="given-name"
-              className="w-full p-2 border-b-2 border-content-secondary bg-bg-primary font-medium text-md border-opacity-70 focus:border-content-primary focus:outline-none"
-            />
-            <ErrorMessage
-              name="name"
-              component="span"
-              className="text-red-500 text-sm"
-            />
-          </div>
+        <Form className="space-y-6 flex flex-col pt-8">
+          <Input
+            name="name"
+            type="text"
+            placeholder="Jane Doe"
+            autoComplete="given-name"
+            labelTitle="Full Name"
+          />
 
-          <div>
-            <label htmlFor="email" className="font-semibold text-lg">
-              Email
-            </label>
-            <Field
-              type="email"
-              name="email"
-              placeholder="yourname@company.com"
-              id="email"
-              autoComplete="email"
-              className="w-full p-2 border-b-2 border-content-secondary bg-bg-primary font-medium text-md border-opacity-70 focus:border-content-primary focus:outline-none"
-            />
-            <ErrorMessage
-              name="email"
-              component="span"
-              className="text-red-500 text-sm"
-            />
-          </div>
+          <Input
+            name="email"
+            type="email"
+            placeholder="j.doe@company.com"
+            autoComplete="email"
+            labelTitle="Email Address"
+          />
 
-          <div>
-            <label htmlFor="phoneNumber" className="font-semibold text-lg">
-              Phone Number
-            </label>
-            <Field name="phoneNumber">
-              {({ field }: any) => (
-                <input
-                  {...field}
-                  type="text"
-                  id="phoneNumber"
-                  placeholder="000 000 0000"
-                  autoComplete="tel"
-                  className="w-full p-2 border-b-2 border-content-secondary bg-bg-primary font-medium text-md border-opacity-70 focus:border-content-primary focus:outline-none"
-                  onChange={(e) => {
-                    const formattedPhoneNumber = formatPhoneNumber(
-                      e.target.value
-                    );
-                    setFieldValue('phoneNumber', formattedPhoneNumber);
-                  }}
-                />
-              )}
-            </Field>
-            <ErrorMessage
-              name="phoneNumber"
-              component="span"
-              className="text-red-500 text-sm"
-            />
-          </div>
+          <Input
+            name="phoneNumber"
+            type="text"
+            placeholder="000 000 0000)"
+            autoComplete="tel"
+            labelTitle="Phone Number"
+            onChange={(e) => {
+              const formattedPhoneNumber = formatPhoneNumber(e.target.value);
+              setFieldValue('phoneNumber', formattedPhoneNumber);
+            }}
+          />
 
-          <div>
-            <label htmlFor="message" className="font-semibold text-lg">
-              Message
-            </label>
-            <Field
-              as="textarea"
-              name="message"
-              id="message"
-              placeholder="I'm interested in your property..."
-              className="w-full p-2 border-b-2 border-content-secondary h-32 bg-bg-primary font-medium text-md border-opacity-70 focus:border-content-primary focus:outline-none"
-            />
-            <ErrorMessage
-              name="message"
-              component="span"
-              className="text-red-500 text-sm"
-            />
-          </div>
+          <Input
+            name="message"
+            as="textarea"
+            placeholder="I'm interested in one of your services..."
+            autoComplete="off"
+            labelTitle="Message"
+            className="h-28"
+          />
 
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-brand-accent text-content-primary p-4 disabled:opacity-50 font-semibold text-xl"
-          >
-            Send Message
-          </button>
+          <SubmitButton isSubmitting={isSubmitting} text="Send Message" />
         </Form>
       )}
     </Formik>
