@@ -5,7 +5,10 @@ export interface HomeCardDTO {
   bedrooms: number;
   bathrooms: number;
   lotSize: string;
+  livableAreaSize: string;
   mainImgUrl: string;
+  overview: string;
+  yearBuilt: number;
 }
 
 export interface PaginatedResponse<T> {
@@ -34,4 +37,5 @@ export interface HomeDetailsDTO {
   whatsSpecial: string[];
   photoGallery: string[];
   overview: string;
+  yearBuilt: number;
 }
