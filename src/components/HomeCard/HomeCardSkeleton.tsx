@@ -1,6 +1,6 @@
 const HomeCardSkeleton = () => {
   return (
-    <div className="flex flex-col animate-pulse h-[593px] pt-20">
+    <div className="flex flex-col animate-pulse h-[593px] ">
       <div className="h-[202px] w-full bg-gray-300 rounded-xl" />
 
       <div className="h-[72px] w-full bg-gray-300 rounded-xl mt-2" />
