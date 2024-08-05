@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { HomeCardDTO } from '../../types/api';
+import NavLinkButton from '../Navigation/NavLinkButton';
 
 interface Props extends HomeCardDTO {}
 
@@ -11,10 +12,13 @@ const HomeCard = ({
   bedrooms,
   bathrooms,
   lotSize,
+  livableAreaSize,
+  yearBuilt,
+  overview,
 }: Props) => {
   return (
-    <div className="flex flex-col bg-bg-secondary bg-opacity-40 p-6">
-      <NavLink to={`/homes/${id}`} className="text-md font-semibold underline">
+    <div className="flex flex-col">
+      <NavLink to={`/homes/${id}`}>
         <img
           src={mainImgUrl}
           alt={'Image for: ' + address}
@@ -22,28 +26,32 @@ const HomeCard = ({
           decoding="auto"
           role="img"
           aria-label={'Image for: ' + address}
+          className="rounded-xl object-cover"
         />
       </NavLink>
 
-      <h2 className="text-2xl font-semibold pt-2">${cost.toLocaleString()}</h2>
-      <h3 className="text-lg font-medium underline pt-2">{address}</h3>
-      <ul className="text-md font-medium pt-2">
-        <li>
-          Beds: <span className="font-bold">{bedrooms.toLocaleString()}</span>
-        </li>
-        <li>
-          Baths: <span className="font-bold">{bathrooms.toLocaleString()}</span>
-        </li>
-        <li>
-          Property Size: <span className="font-bold">{lotSize}</span>
-        </li>
-      </ul>
-      <NavLink
-        to={`/homes/${id}`}
-        className="font-medium text-bg-primary text-xl bg-brand-accent px-8 py-3 w-full text-center mt-8"
-      >
-        Get Details
+      <NavLink to={`/homes/${id}`}>
+        <h4 className="text-2xl pt-2 font-editorial_ul underline">{address}</h4>
       </NavLink>
+
+      <p className="mt-4 text-md">{overview}</p>
+
+      <ul className="grid grid-cols-2 font-haas_md text-lg gap-x-3 mt-4">
+        <li>${cost.toLocaleString()}</li>
+        <li>Built {yearBuilt}</li>
+        <li>{livableAreaSize} home</li>
+        <li>{bedrooms} Bed</li>
+        <li>{lotSize} lot</li>
+        <li>{bathrooms} Bath</li>
+      </ul>
+
+      <NavLinkButton
+        className="text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content mt-8"
+        text="View Details"
+        bgClasses="bg-content"
+        arrowClasses="stroke-content group-hover:stroke-primary"
+        to={`/homes/${id}`}
+      />
     </div>
   );
 };
