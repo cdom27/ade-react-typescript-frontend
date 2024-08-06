@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { ScrollRestoration } from 'react-router-dom';
 import Nav from '../components/Navigation/Nav';
 import Footer from '../components/Navigation/Footer';
+import ScrollToTopButton from '../components/Navigation/ScrollToTopButton';
 
 interface Props {
   children: ReactNode;
@@ -19,6 +20,7 @@ const PageLayout = ({ children, className }: Props) => {
         {children}
       </main>
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 };
