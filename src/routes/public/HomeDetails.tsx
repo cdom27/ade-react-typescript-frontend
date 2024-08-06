@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
-import { NavLink, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import PageLayout from '../../layouts/PageLayout';
 import api from '../../api/axios';
 import { HomeDetailsDTO } from '../../types/api';
 import VisitRequestModalForm from '../../components/Forms/VisitRequestModalForm';
+import { Arrow } from '../../components/Icons';
+import { Accordion, AccordionItem } from '../../components/Accordion';
 
 const HomeDetails = () => {
   const { homeId } = useParams<{ homeId: string }>();
@@ -36,10 +38,10 @@ const HomeDetails = () => {
   if (home)
     return (
       <PageLayout>
-        <NavLink to="/homes" className="text-md font-semibold underline pl-6">
-          Back to all homes
-        </NavLink>
-        <div className="space-y-4 p-6 border-b-2 border-t-2 border-bg-secondary mt-12">
+        <section className="relative">
+          <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6">
+            {home.address}
+          </h1>
           <img
             src={home.mainImgUrl}
             alt={`Image of ${home.address}`}
@@ -47,145 +49,141 @@ const HomeDetails = () => {
             decoding="auto"
             role="img"
             aria-label={`Image of ${home.address}`}
+            className="overflow-hidden h-[400px] object-cover"
           />
-          <ul className="font-medium text-lg">
-            <li>
-              <h1 className="text-3xl font-semibold">
-                ${home.cost.toLocaleString()}
-              </h1>
-            </li>
-            <li>
-              <h2 className="underline">{home.address}</h2>
-            </li>
-            <li className="pt-6">Beds: {home.bedrooms}</li>
-            <li>Baths: {home.bathrooms}</li>
-            <li>Livable area: {home.livableAreaSize}</li>
-            <li>Lot size: {home.lotSize}</li>
-            <li>
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="text-2xl bg-brand-accent px-8 py-3 w-full text-center mt-8 text-bg-primary"
-              >
-                Request a Tour
-              </button>
-            </li>
-          </ul>
-        </div>
-        <VisitRequestModalForm
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-        />
-        <div className="space-y-12 p-6 border-b-2 border-bg-secondary">
-          <h1 className="text-3xl font-semibold">Home Overview</h1>
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold">What's special</h2>
-            <ul className="flex flex-row flex-wrap gap-2">
+        </section>
+
+        <section className="px-6 py-20 font-haas_roman text-center">
+          <div className="flex flex-col space-y-8">
+            <h1 className="text-4xl font-editorial_ul text-content">
+              {home.address}
+            </h1>
+            <p>{home.overview}</p>
+          </div>
+
+          <div className="pt-14">
+            <h2 className="text-4xl font-editorial_ul text-left">
+              What&apos;s Special?
+            </h2>
+            <ul className="grid grid-cols-1 gap-y-3 pt-6 text-sm px-6">
               {home.whatsSpecial.map((item) => (
                 <li
                   key={item}
-                  className="bg-bg-secondary bg-opacity-50 p-2 font-medium text-md"
+                  className="font-fraktion_reg bg-content bg-opacity-20 rounded-full py-3 px-6"
                 >
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold">Description of home</h2>
-            <p className="font-medium text-lg">{home.overview}</p>
+
+          <div className="pt-14">
+            <h2 className="text-4xl font-editorial_ul text-left">
+              Quick Details
+            </h2>
+            <ul className="grid grid-cols-2 font-haas_md text-lg gap-x-3 mt-6 text-left">
+              <li>${home.cost.toLocaleString()}</li>
+              <li>Built {home.yearBuilt}</li>
+              <li>{home.livableAreaSize} home</li>
+              <li>{home.bedrooms} Bed</li>
+              <li>{home.lotSize} lot</li>
+              <li>{home.bathrooms} Bath</li>
+            </ul>
+
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="group relative overflow-hidden font-fraktion_reg flex items-center justify-between text-md border-[2px] rounded-full px-9 py-4 transition-colors duration-300 ease-in-out text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content mt-8 w-full"
+            >
+              <span className="relative z-10">Schedule A Visit</span>
+              <Arrow className="size-5 relative z-10 transition-colors duration-300 ease-in-out stroke-content group-hover:stroke-primary rotate-[-45deg]" />
+              <div className="absolute inset-0 transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0 bg-content" />
+            </button>
           </div>
-        </div>
-        <div className="space-y-12 p-6 border-b-2 border-bg-secondary">
-          <h1 className="text-3xl font-semibold">Facts & Features</h1>
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold">Interior Details</h2>
-            {Object.entries(home.facts.interior).map(([key, value]) => (
-              <div key={key}>
-                <h3 className="text-xl font-medium pb-2 capitalize">
-                  {key.replace('_', ' ')}
-                </h3>
-                <ul className="list-disc px-6">
-                  {(value as string[]).map((item) => (
-                    <li key={item} className="font-medium text-lg">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold">Property Details</h2>
-            {Object.entries(home.facts.property).map(([key, value]) => (
-              <div key={key}>
-                <h3 className="text-xl font-medium pb-2 capitalize">
-                  {key.replace('_', ' ')}
-                </h3>
-                <ul className="list-disc px-6">
-                  {(value as string[]).map((item) => (
-                    <li key={item} className="font-medium text-lg">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold">Home Construction</h2>
-            {Object.entries(home.facts.construction).map(([key, value]) => (
-              <div key={key}>
-                <h3 className="text-xl font-medium pb-2 capitalize">
-                  {key.replace('_', ' ')}
-                </h3>
-                <ul className="list-disc px-6">
-                  {(value as string[]).map((item) => (
-                    <li key={item} className="font-medium text-lg">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold">Public Utilities</h2>
-            {Object.entries(home.facts.utils).map(([key, value]) => (
-              <div key={key}>
-                <h3 className="text-xl font-medium pb-2 capitalize">
-                  {key.replace('_', ' ')}
-                </h3>
-                <ul className="list-disc px-6">
-                  {(value as string[]).map((item) => (
-                    <li key={item} className="font-medium text-lg">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold">Neighborhood</h2>
-            {Object.entries(home.facts.community).map(([key, value]) => (
-              <div key={key}>
-                <h3 className="text-xl font-medium pb-2 capitalize">
-                  {key.replace('_', ' ')}
-                </h3>
-                <ul className="list-disc px-6">
-                  {(value as string[]).map((item) => (
-                    <li key={item} className="font-medium text-lg">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="space-y-12 p-6 pb-0">
-          <h1 className="text-3xl font-semibold">Photo Gallery</h1>
-          <div className="gap-2 grid grid-cols-1">
+        </section>
+
+        <section className="px-6 pb-20 font-haas_roman text-left">
+          <h2 className="text-4xl font-editorial_ul text-left pb-2">
+            Facts And Features
+          </h2>
+          <Accordion>
+            <AccordionItem title="Home Interior">
+              {Object.entries(home.facts.interior).map(([key, value]) => (
+                <div key={key}>
+                  <h3 className="text-xl pb-1 capitalize font-editorial_ul font-semibold">
+                    {key.replace('_', ' ')}
+                  </h3>
+                  <ul className="list-disc px-6 text-md mb-4">
+                    {(value as string[]).map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </AccordionItem>
+            <AccordionItem title="Property Details">
+              {Object.entries(home.facts.property).map(([key, value]) => (
+                <div key={key}>
+                  <h3 className="text-xl pb-1 capitalize font-editorial_ul font-semibold">
+                    {key.replace('_', ' ')}
+                  </h3>
+                  <ul className="list-disc px-6 text-md mb-4">
+                    {(value as string[]).map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </AccordionItem>
+            <AccordionItem title="Home Construction">
+              {Object.entries(home.facts.construction).map(([key, value]) => (
+                <div key={key}>
+                  <h3 className="text-xl pb-1 capitalize font-editorial_ul font-semibold">
+                    {key.replace('_', ' ')}
+                  </h3>
+                  <ul className="list-disc px-6 text-md mb-4">
+                    {(value as string[]).map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </AccordionItem>
+            <AccordionItem title="Utilities">
+              {Object.entries(home.facts.utils).map(([key, value]) => (
+                <div key={key}>
+                  <h3 className="text-xl pb-1 capitalize font-editorial_ul font-semibold">
+                    {key.replace('_', ' ')}
+                  </h3>
+                  <ul className="list-disc px-6 text-md mb-4">
+                    {(value as string[]).map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </AccordionItem>
+            <AccordionItem title="Neighborhood">
+              {Object.entries(home.facts.community).map(([key, value]) => (
+                <div key={key}>
+                  <h3 className="text-xl pb-1 capitalize font-editorial_ul font-semibold">
+                    {key.replace('_', ' ')}
+                  </h3>
+                  <ul className="list-disc px-6 text-md mb-4">
+                    {(value as string[]).map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </AccordionItem>
+          </Accordion>
+        </section>
+
+        <section className="px-6 pb-20 font-haas_roman text-left">
+          <h2 className="text-4xl font-editorial_ul text-left pb-2">
+            Home Gallery
+          </h2>
+          <div className="gap-4 grid grid-cols-1 mt-6">
             {home.photoGallery.map((photo) => (
               <img
                 key={photo}
@@ -195,10 +193,16 @@ const HomeDetails = () => {
                 decoding="async"
                 role="img"
                 aria-label={`Image of ${home.address}`}
+                className="rounded-lg object-cover"
               />
             ))}
           </div>
-        </div>
+        </section>
+
+        <VisitRequestModalForm
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
       </PageLayout>
     );
 };
