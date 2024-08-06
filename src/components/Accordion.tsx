@@ -19,7 +19,7 @@ const AccordionItem = ({
   onClick,
 }: AccordionItemProps) => {
   return (
-    <div className="border-t-[1px] border-b-[1px] border-content">
+    <div className="border-t-[1px] border-b-[1px] border-content h-full">
       <button
         className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
         onClick={onClick}
@@ -37,7 +37,7 @@ const AccordionItem = ({
       </button>
       <div
         className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          isOpen ? 'h-full opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="pb-6 font-haas_roman">{children}</div>
