@@ -33,7 +33,18 @@ const HomeDetails = () => {
 
   if (error) return <p>{error}</p>;
 
-  if (loading) return <p>Create loading state</p>;
+  //Loading state
+  if (loading)
+    return (
+      <PageLayout>
+        <section className="relative">
+          <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6">
+            Loading Home Details
+          </h1>
+          <div className="h-[400px] bg-content" />
+        </section>
+      </PageLayout>
+    );
 
   if (home)
     return (
