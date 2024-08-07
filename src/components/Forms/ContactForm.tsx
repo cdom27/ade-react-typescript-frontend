@@ -76,7 +76,7 @@ const ContactForm = () => {
           <Input
             name="phoneNumber"
             type="text"
-            placeholder="000 000 0000)"
+            placeholder="000 000 0000"
             autoComplete="tel"
             labelTitle="Phone Number"
             onChange={(e) => {
