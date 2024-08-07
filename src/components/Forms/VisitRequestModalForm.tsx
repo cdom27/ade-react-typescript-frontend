@@ -2,7 +2,11 @@
 import { useParams } from 'react-router-dom';
 import * as Yup from 'yup';
 import api from '../../api/axios';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, ErrorMessage } from 'formik';
+import { phoneRegExp, formatPhoneNumber } from '../../utils/phoneUtils';
+import { Plus } from '../Icons';
+import Input from './FormUI/Input';
+import SubmitButton from './FormUI/SubmitButton';
 
 interface VisitReqModalProps {
   isOpen: boolean;
@@ -16,8 +20,6 @@ interface VisitRequestFormValues {
   visitorComment: string;
   requestedDate: Date;
 }
-
-const phoneRegExp = /^(\d{3})-(\d{3})-(\d{4})$/;
 
 const formatDateForInput = (date: Date): string => {
   const pad = (num: number): string => (num < 10 ? '0' + num : num.toString());
@@ -83,129 +85,86 @@ const VisitRequestModalForm = ({ isOpen, onClose }: VisitReqModalProps) => {
     setSubmitting(false);
   };
 
-  const formatPhoneNumber = (value: string) => {
-    const phoneNumber = value.replace(/[^\d]/g, '');
-    const phoneNumberLength = phoneNumber.length;
-    if (phoneNumberLength < 4) return phoneNumber;
-    if (phoneNumberLength < 7)
-      return `${phoneNumber.slice(0, 3)}-${phoneNumber.slice(3)}`;
-    return `${phoneNumber.slice(0, 3)}-${phoneNumber.slice(
-      3,
-      6
-    )}-${phoneNumber.slice(6, 10)}`;
-  };
-
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-8 rounded-lg max-w-md w-full">
-        <h2 className="text-2xl font-bold mb-4">Request a Tour</h2>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center text-content z-50">
+      <div className="bg-primary p-8 rounded-lg max-w-md w-full flex flex-col items-center max-h-screen overflow-y-auto">
+        <button type="button" onClick={onClose} className="mx-auto">
+          <Plus className="size-5 stroke-content rotate-45 mb-8" />
+        </button>
+        <h2 className="text-4xl font-editorial_ul text-center">
+          Schedule a Visit!
+        </h2>
+
         <Formik
           initialValues={initialValues}
           validationSchema={VisitRequestSchema}
           onSubmit={handleSubmit}
         >
           {({ isSubmitting, setFieldValue, values }) => (
-            <Form className="space-y-4">
-              <div>
-                <Field
-                  name="visitorName"
-                  type="text"
-                  placeholder="Full Name"
-                  className="w-full p-2 border rounded"
-                />
-                <ErrorMessage
-                  name="visitorName"
-                  component="div"
-                  className="text-red-500 text-sm"
-                />
-              </div>
-              <div>
-                <Field
-                  name="visitorEmail"
-                  type="email"
-                  placeholder="Email"
-                  className="w-full p-2 border rounded"
-                />
-                <ErrorMessage
-                  name="visitorEmail"
-                  component="div"
-                  className="text-red-500 text-sm"
-                />
-              </div>
-              <div>
-                <Field name="visitorPhoneNumber">
-                  {({ field }: any) => (
-                    <input
-                      {...field}
-                      type="text"
-                      id="visitorPhoneNumber"
-                      placeholder="000 000 0000"
-                      autoComplete="tel"
-                      className="w-full p-2 border rounded"
-                      onChange={(e) => {
-                        const formattedPhoneNumber = formatPhoneNumber(
-                          e.target.value
-                        );
-                        setFieldValue(
-                          'visitorPhoneNumber',
-                          formattedPhoneNumber
-                        );
-                      }}
-                    />
-                  )}
-                </Field>
-                <ErrorMessage
-                  name="visitorPhoneNumber"
-                  component="div"
-                  className="text-red-500 text-sm"
-                />
-              </div>
-              <div>
+            <Form className="space-y-6 flex flex-col pt-8">
+              <Input
+                name="visitorName"
+                type="text"
+                placeholder="Jane Doe"
+                autoComplete="given-name"
+                labelTitle="Full Name"
+              />
+              <Input
+                name="visitorEmail"
+                type="email"
+                placeholder="j.doe@company.com"
+                autoComplete="email"
+                labelTitle="Email Address"
+              />
+              <Input
+                name="visitorPhoneNumber"
+                type="text"
+                placeholder="000 000 0000"
+                autoComplete="tel"
+                labelTitle="Phone Number"
+                onChange={(e) => {
+                  const formattedPhoneNumber = formatPhoneNumber(
+                    e.target.value
+                  );
+                  setFieldValue('visitorPhoneNumber', formattedPhoneNumber);
+                }}
+              />
+              <div className="flex flex-col gap-1">
+                <label htmlFor="requestedDate" className="text-lg">
+                  Preferred Date of Visit*
+                </label>
                 <input
                   name="requestedDate"
+                  id="requestedDate"
                   type="datetime-local"
                   value={formatDateForInput(values.requestedDate)}
                   onChange={(e) =>
                     setFieldValue('requestedDate', new Date(e.target.value))
                   }
-                  className="w-full p-2 border rounded"
+                  className="bg-primary border-b-2 border-content border-opacity-20 focus:border-opacity-100 focus:outline-none"
                 />
                 <ErrorMessage
                   name="requestedDate"
-                  component="div"
+                  component="span"
                   className="text-red-500 text-sm"
                 />
               </div>
-              <div>
-                <Field
-                  name="visitorComment"
-                  as="textarea"
-                  placeholder="Message"
-                  className="w-full p-2 border rounded h-24"
-                />
-                <ErrorMessage
-                  name="visitorComment"
-                  component="div"
-                  className="text-red-500 text-sm"
-                />
-              </div>
+
+              <Input
+                name="visitorComment"
+                as="textarea"
+                placeholder="I'm interested in one of your homes..."
+                autoComplete="off"
+                labelTitle="Comment"
+                className="h-28"
+              />
               <div className="flex justify-end space-x-2">
-                <button
-                  type="button"
-                  onClick={onClose}
-                  className="px-4 py-2 bg-gray-200 rounded"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="px-4 py-2 bg-blue-500 text-white rounded"
-                >
-                  {isSubmitting ? 'Submitting...' : 'Submit'}
-                </button>
+                <SubmitButton
+                  isSubmitting={isSubmitting}
+                  text={isSubmitting ? 'Submitting...' : 'Submit'}
+                />
               </div>
             </Form>
           )}
