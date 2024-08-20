@@ -25,7 +25,7 @@ const About = () => {
         <VideoHero videoSources={videoSources} posterSource={posterSource} />
       </section>
 
-      <section className="px-6 py-20 font-haas_roman text-center">
+      <section className="px-6 py-20 font-haas_roman text-center md:px-20">
         <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           We Never Forget Our Roots
         </h2>

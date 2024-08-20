@@ -32,7 +32,7 @@ const Landing = () => {
         <VideoHero videoSources={videoSources} posterSource={posterSource} />
       </section>
 
-      <section className="px-6 py-20 font-haas_roman text-center">
+      <section className="px-6 py-20 font-haas_roman text-center md:px-20">
         <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Industry Leading Experience
         </h2>
@@ -72,7 +72,7 @@ const Landing = () => {
         </div>
       </section>
 
-      <section className="bg-leafs bg-cover font-haas_roman bg-center h-full text-primary px-6 py-20">
+      <section className="bg-leafs bg-cover font-haas_roman bg-center h-full text-primary px-6 py-20 md:px-20">
         <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Embody The{' '}
           <span className="font-editorial_ul_italic text-accent">
@@ -137,7 +137,7 @@ const Landing = () => {
         </div>
       </section>
 
-      <section className="px-6 py-20 font-haas_roman">
+      <section className="px-6 py-20 font-haas_roman md:px-20">
         <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Let's Chat About Your{' '}
           <span className="font-editorial_ul_italic">Dream Home</span>
@@ -187,7 +187,7 @@ const Landing = () => {
         <ContactForm />
       </section>
 
-      <section className="px-6 py-20 bg-accent space-y-8">
+      <section className="px-6 py-20 bg-accent space-y-8 md:px-20">
         <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Answers To Some{' '}
           <span className="font-editorial_ul_italic">Popular Questions</span>

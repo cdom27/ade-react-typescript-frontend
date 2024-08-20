@@ -27,7 +27,7 @@ const Contact = () => {
         <VideoHero videoSources={videoSources} posterSource={posterSource} />
       </section>
 
-      <section className="px-6 py-20 font-haas_roman">
+      <section className="px-6 py-20 font-haas_roman md:px-20">
         <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Let's Chat About Your{' '}
           <span className="font-editorial_ul_italic">Dream Home</span>

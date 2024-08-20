@@ -27,7 +27,7 @@ const Approach = () => {
         <VideoHero videoSources={videoSources} posterSource={posterSource} />
       </section>
 
-      <section className="px-6 py-20 font-haas_roman text-center">
+      <section className="px-6 py-20 font-haas_roman text-center md:px-20">
         <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           We Play Match-Maker
         </h2>
@@ -68,7 +68,7 @@ const Approach = () => {
         </div>
       </section>
 
-      <section className="bg-leafs bg-cover font-haas_roman bg-center h-full text-primary px-6 py-20">
+      <section className="bg-leafs bg-cover font-haas_roman bg-center h-full text-primary px-6 py-20 md:px-20">
         <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Fortify What&apos;s Good About{' '}
           <span className="font-editorial_ul_italic text-accent">Life</span>
@@ -104,7 +104,7 @@ const Approach = () => {
         </div>
       </section>
 
-      <section className="px-6 py-20 font-haas_roman text-center">
+      <section className="px-6 py-20 font-haas_roman text-center md:px-20">
         <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Here&apos;s How We Do It At Ade
         </h2>
