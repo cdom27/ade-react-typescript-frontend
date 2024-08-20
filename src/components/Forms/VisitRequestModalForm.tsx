@@ -89,11 +89,11 @@ const VisitRequestModalForm = ({ isOpen, onClose }: VisitReqModalProps) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center text-content z-50">
-      <div className="bg-primary p-8 rounded-lg max-w-md w-full flex flex-col items-center max-h-screen overflow-y-auto">
+      <div className="bg-primary p-8 rounded-lg w-full flex flex-col items-center max-h-screen overflow-y-auto sm:mx-5">
         <button type="button" onClick={onClose} className="mx-auto">
-          <Plus className="size-5 stroke-content rotate-45 mb-8" />
+          <Plus className="size-5 stroke-content rotate-45 mb-8 sm:size-10" />
         </button>
-        <h2 className="text-4xl font-editorial_ul text-center">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Schedule a Visit!
         </h2>
 
@@ -103,7 +103,7 @@ const VisitRequestModalForm = ({ isOpen, onClose }: VisitReqModalProps) => {
           onSubmit={handleSubmit}
         >
           {({ isSubmitting, setFieldValue, values }) => (
-            <Form className="space-y-6 flex flex-col pt-8">
+            <Form className="space-y-6 flex flex-col pt-8 sm:w-[90%] sm:text-xl">
               <Input
                 name="visitorName"
                 type="text"

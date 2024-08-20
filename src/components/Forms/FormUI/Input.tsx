@@ -32,7 +32,7 @@ const Input = ({
 
   return (
     <div className="flex flex-col gap-1">
-      <label htmlFor={name} className="text-lg">
+      <label htmlFor={name} className="text-lg sm:text-xl">
         {labelTitle}*
       </label>
       <Field
@@ -42,7 +42,7 @@ const Input = ({
         placeholder={placeholder}
         id={name}
         autoComplete={autoComplete}
-        className={`bg-primary border-b-2 border-content border-opacity-20 focus:border-opacity-100 focus:outline-none ${className}`}
+        className={`bg-primary border-b-2 border-content border-opacity-20 focus:border-opacity-100 focus:outline-none sm:text-xl ${className}`}
         onChange={handleChange}
       />
       {meta.touched && meta.error && (

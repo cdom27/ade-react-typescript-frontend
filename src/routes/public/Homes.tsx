@@ -67,7 +67,7 @@ const Homes = () => {
   return (
     <PageLayout>
       <section className="relative">
-        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-accent mt-20 px-6">
+        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-accent mt-20 px-6 sm:text-5xl">
           Find Your <span className="font-editorial_ul_italic">Dream Home</span>{' '}
           In San Diego
         </h1>
@@ -75,18 +75,18 @@ const Homes = () => {
       </section>
 
       <section className="px-6 py-20 font-haas_roman">
-        <h2 className="text-4xl font-editorial_ul text-center">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Life Is Too Short To Settle On A Home
         </h2>
-        <p className="pt-8 text-center">
+        <p className="pt-8 text-center sm:text-xl">
           There&apos;s nothing quite like an Ade home. Browse through our unique
           homes and schedule a visit with our experts.
         </p>
-        <h3 className="text-3xl font-editorial_ul pt-8 text-left">
+        <h3 className="text-3xl font-editorial_ul pt-8 text-left sm:text-4xl">
           Dream Homes By Ade
         </h3>
 
-        <div className="space-y-16 pb-28 pt-10">
+        <div className="space-y-16 pb-28 pt-10 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-16 sm:space-y-0">
           {homes.map((home) => (
             <HomeCard key={home.id} {...home} />
           ))}

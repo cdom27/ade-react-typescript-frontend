@@ -24,7 +24,7 @@ const Landing = () => {
   return (
     <PageLayout>
       <section className="relative">
-        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6">
+        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6 sm:text-5xl">
           Capture The{' '}
           <span className="font-editorial_ul_italic">Essence of San Diego</span>{' '}
           In Your Home
@@ -33,15 +33,15 @@ const Landing = () => {
       </section>
 
       <section className="px-6 py-20 font-haas_roman text-center">
-        <h2 className="text-4xl font-editorial_ul text-center">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Industry Leading Experience
         </h2>
-        <ul className="pt-8">
+        <ul className="pt-8 sm:text-xl">
           <li>Eliminate stress</li>
           <li>Minimize risk</li>
           <li className="font-haas_md">No "One-size-fits-all"</li>
         </ul>
-        <div className="pt-4 space-y-4">
+        <div className="pt-4 space-y-4 sm:text-xl">
           <p>
             We aim to capture the charm of San Diego in your home and create a
             place where you feel safe, comfortable, and inspired.
@@ -53,33 +53,33 @@ const Landing = () => {
           </p>
         </div>
 
-        <div className="grid cols-2 pt-8 gap-x-8">
+        <div className="grid cols-2 pt-8 gap-x-8 w-full">
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/exp-1.webp"
             alt="Beautiful home in San Diego made by Ade San Diego Home Builders"
-            className="col-span-1 rounded-xl h-[170px] object-cover mt-8"
+            className="col-span-1 rounded-xl h-[170px] object-cover mt-8 sm:h-[200px]"
           />
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/exp-3.webp"
             alt="Scenic view of San Diego. Ade San Diego Home Builders"
-            className="col-span-1 rounded-xl h-[170px] object-cover object-left-bottom"
+            className="col-span-1 rounded-xl h-[170px] object-cover object-left-bottom sm:h-[200px]"
           />
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/exp-2.webp"
             alt="Beautiful community in San Diego. Ade San Diego Home Builders"
-            className="col-span-2 mx-auto rounded-lg max-w-[200px] mt-8"
+            className="col-span-2 mx-auto rounded-lg max-w-[200px] mt-8 sm:max-w-[250px]"
           />
         </div>
       </section>
 
       <section className="bg-leafs bg-cover font-haas_roman bg-center h-full text-primary px-6 py-20">
-        <h2 className="text-4xl font-editorial_ul text-center">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Embody The{' '}
           <span className="font-editorial_ul_italic text-accent">
             Vibrant Spirit of San Diego
           </span>
         </h2>
-        <div className="pt-8 space-y-4">
+        <div className="pt-8 space-y-4 sm:text-xl">
           <p>
             At Ade, we understand that you&apos;re building home than a house,
             you&apos;re building a home. It&apos;s more than just a structure,
@@ -94,7 +94,7 @@ const Landing = () => {
 
         <div className="flex flex-col gap-4 pt-4">
           <NavLinkButton
-            className="text-primary hover:text-content border-primary hover:border-accent active:border-accent hover:bg-accent active:bg-accent"
+            className="text-primary hover:text-content border-primary hover:border-accent active:border-accent hover:bg-accent active:bg-accent "
             text="View Our Services"
             bgClasses="bg-accent"
             arrowClasses="stroke-primary group-hover:stroke-content"
@@ -109,57 +109,57 @@ const Landing = () => {
           />
         </div>
 
-        <h3 className="text-3xl font-editorial_ul pt-20">
+        <h3 className="text-3xl font-editorial_ul pt-20 sm:text-4xl">
           Recent Built Homes In San Diego
         </h3>
 
-        <div className="grid grid-cols-1 gap-y-8 pt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-8 sm:gap-8 pt-8">
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/rb-1.webp"
             alt="Ocean front home in San Diego. Ade San Diego Home Builders"
-            className="col-span-1 rounded-lg max-h-[200px] w-full object-cover"
+            className="col-span-1 rounded-lg max-h-[200px] w-full object-cover sm:h-[200px]"
           />
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/rb-2.webp"
             alt="Modern home in San Diego. Ade San Diego Home Builders"
-            className="col-span-1 rounded-lg max-h-[200px] w-full object-cover"
+            className="col-span-1 rounded-lg max-h-[200px] w-full object-cover sm:h-[200px]"
           />
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/rb-3.webp"
             alt="Nature home in San Diego. Ade San Diego Home Builders"
-            className="col-span-1 rounded-lg max-h-[200px] w-full object-cover object-top"
+            className="col-span-1 rounded-lg max-h-[200px] w-full object-cover object-top sm:h-[200px]"
           />
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/rb-4.webp"
             alt="Modern home in San Diego. Ade San Diego Home Builders"
-            className="col-span-1 rounded-lg max-h-[200px] w-full object-cover"
+            className="col-span-1 rounded-lg max-h-[200px] w-full object-cover sm:h-[200px]"
           />
         </div>
       </section>
 
       <section className="px-6 py-20 font-haas_roman">
-        <h2 className="text-4xl font-editorial_ul text-center">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Let's Chat About Your{' '}
           <span className="font-editorial_ul_italic">Dream Home</span>
         </h2>
-        <p className="text-center pt-8">
+        <p className="text-center pt-8 sm:text-xl">
           Give us call, drop by our offices, or send us a message, whatever
           works best for you.
         </p>
         <img
           src="https://db36hfj0unq27.cloudfront.net/regular-content/office-1080.webp"
           alt="Ade office building in San Diego"
-          className="mt-8 rounded-lg object-cover pb-4"
+          className="mt-8 rounded-lg object-cover pb-4 sm:w-1/2 sm:mx-auto"
         />
         <a
           href="https://www.google.com/maps/place/Genesee+Ave,+San+Diego,+CA/@32.8419881,-117.2001607,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc00f2a04c94e1:0x573bd77f800801bf!8m2!3d32.8419881!4d-117.1975858!16s%2Fg%2F1tj2nrpb?entry=ttu"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline"
+          className="underline sm:text-xl"
         >
           80 Genesee Ave, San Diego, CA 90912
         </a>
-        <div className="pt-8 space-y-4 font-haas_md">
+        <div className="pt-8 space-y-4 font-haas_md sm:text-xl">
           <p>
             Unscheduled visits or general inquiries are taken starting from 10AM
             to 1PM.
@@ -167,20 +167,28 @@ const Landing = () => {
           <p>Total office hours are from 7AM to 6PM.</p>
         </div>
 
-        <h3 className="text-3xl font-editorial_ul pt-20">
+        <h3 className="text-3xl font-editorial_ul pt-20 sm:text-4xl">
           Unsure where to start? Send us message we can follow up on.
         </h3>
-        <a href="tel:+16190969640" className="underline block pt-2">
-          +1 (619) 096-9640
-        </a>
-        <a href="mailto:hey@adehomes.com" className="underline block pt-2">
-          hey@adehomes.com
-        </a>
+        <div className="flex flex-col">
+          <a
+            href="tel:+16190969640"
+            className="underline pt-2 sm:text-xl self-start"
+          >
+            +1 (619) 096-9640
+          </a>
+          <a
+            href="mailto:hey@adehomes.com"
+            className="underline pt-2 sm:text-xl self-start"
+          >
+            hey@adehomes.com
+          </a>
+        </div>
         <ContactForm />
       </section>
 
       <section className="px-6 py-20 bg-accent space-y-8">
-        <h2 className="text-4xl font-editorial_ul text-center">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Answers To Some{' '}
           <span className="font-editorial_ul_italic">Popular Questions</span>
         </h2>
@@ -193,12 +201,12 @@ const Landing = () => {
             website project. If you&apos;re interested in learning more about
             how this website was made, check out my{' '}
             <a
-              href="/"
+              href="https://cidominguez.com/work"
               target="_blank"
               rel="noopener noreferrer"
               className="underline font-haas_md"
             >
-              blog post discussing the tech stack behind the Ade website
+              portfolio.
             </a>
             .
           </AccordionItem>
@@ -225,12 +233,14 @@ const Landing = () => {
           </AccordionItem>
         </Accordion>
         <a
-          href="/"
+          href="https://cidominguez.com/work"
           target="_blank"
           rel="noopener noreferrer"
           className="group relative overflow-hidden font-fraktion_reg flex items-center justify-between text-md border-[2px] rounded-full px-9 py-4 transition-colors duration-300 ease-in-out text-content hover:text-accent border-content hover:border-content active:border-content hover:bg-content active:bg-content"
         >
-          <span className="relative z-10">Learn How This Website Was Made</span>
+          <span className="relative z-10 sm:text-xl">
+            Learn How This Website Was Made
+          </span>
           <Arrow className="size-7 relative z-10 transition-colors duration-300 ease-in-out stroke-content group-hover:stroke-accent rotate-[-45deg]" />
           <div className="absolute inset-0 transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0 bg-content" />
         </a>

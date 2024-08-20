@@ -5,7 +5,7 @@ import { Arrow } from '../Icons';
 const Footer = () => {
   return (
     <footer className="px-6 py-20 text-center bg-leafs bg-cover">
-      <h2 className="text-4xl font-editorial_ul_italic text-primary">
+      <h2 className="text-4xl font-editorial_ul_italic text-primary sm:text-5xl">
         Embrace San Diego With Ade
       </h2>
       <ul className="flex flex-col gap-y-4 mt-16">
@@ -14,7 +14,7 @@ const Footer = () => {
             <NavLink
               to={link.href}
               className={({ isActive }) =>
-                ` font-editorial_ul text-2xl ${
+                ` font-editorial_ul text-2xl sm:text-3xl ${
                   isActive ? 'text-accent' : 'text-primary'
                 }`
               }
@@ -25,10 +25,10 @@ const Footer = () => {
         ))}
         <li>
           <a
-            href="/"
+            href="https://cidominguez.com/work"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative overflow-hidden font-fraktion_reg flex items-center justify-between text-md rounded-full px-9 py-4 transition-colors duration-300 ease-in-out text-content bg-accent hover:bg-primary active:bg-primary mt-8"
+            className="group relative overflow-hidden font-fraktion_reg flex items-center justify-between text-md rounded-full px-9 py-4 transition-colors duration-300 ease-in-out text-content bg-accent hover:bg-primary active:bg-primary mt-8 sm:text-xl"
           >
             <span className="relative z-10">
               Learn How This Website Was Made

@@ -68,7 +68,7 @@ const Nav = () => {
           itemsTl.fromTo(
             item,
             { y: -20, opacity: 0 },
-            { y: 0, opacity: 1, duration: 0.3, delay: index * 0.1 }
+            { y: 0, opacity: 1, duration: 0.2, delay: index * 0.1 }
           );
         }
       });
@@ -99,7 +99,7 @@ const Nav = () => {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="font-fraktion_reg text-sm"
+          className="font-fraktion_reg text-sm sm:text-xl"
         >
           {isOpen ? 'CLOSE' : 'MENU'}
         </button>
@@ -134,7 +134,7 @@ const Nav = () => {
         ))}
         <li ref={(el) => (listItemRef.current[links.length] = el)}>
           <NavLinkButton
-            className="text-accent hover:text-content border-none bg-content hover:bg-accent active:bg-accent text-lg px-6 py-2 mt-8"
+            className="text-accent hover:text-content border-none bg-content hover:bg-accent active:bg-accent text-lg px-6 py-2 mt-8 sm:text-xl sm:w-4/5 sm:mx-auto"
             text="GET IN TOUCH"
             to="/contact"
             bgClasses="bg-accent"

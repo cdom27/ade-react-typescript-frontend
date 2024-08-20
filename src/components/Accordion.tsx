@@ -24,7 +24,7 @@ const AccordionItem = ({
         className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
         onClick={onClick}
       >
-        <span className="font-haas_md w-3/4">{title}</span>
+        <span className="font-haas_md w-3/4 sm:text-2xl">{title}</span>
 
         <div className="relative w-4 h-4">
           <Minus className="stroke-content size-4 absolute top-0 left-0" />
@@ -40,7 +40,7 @@ const AccordionItem = ({
           isOpen ? 'h-full opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="pb-6 font-haas_roman">{children}</div>
+        <div className="pb-6 font-haas_roman sm:text-xl">{children}</div>
       </div>
     </div>
   );

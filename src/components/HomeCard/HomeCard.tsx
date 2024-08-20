@@ -17,7 +17,7 @@ const HomeCard = ({
   overview,
 }: Props) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col flex-grow">
       <NavLink to={`/homes/${id}`}>
         <img
           src={mainImgUrl}
@@ -31,10 +31,12 @@ const HomeCard = ({
       </NavLink>
 
       <NavLink to={`/homes/${id}`}>
-        <h4 className="text-2xl pt-2 font-editorial_ul underline">{address}</h4>
+        <h4 className="text-2xl pt-2 font-editorial_ul underline sm:text-3xl">
+          {address}
+        </h4>
       </NavLink>
 
-      <p className="mt-4 text-md">{overview}</p>
+      <p className="mt-4 text-md sm:text-xl">{overview}</p>
 
       <ul className="grid grid-cols-2 font-haas_md text-lg gap-x-3 mt-4">
         <li>${cost.toLocaleString()}</li>
@@ -45,13 +47,15 @@ const HomeCard = ({
         <li>{bathrooms} Bath</li>
       </ul>
 
-      <NavLinkButton
-        className="text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content mt-8"
-        text="View Details"
-        bgClasses="bg-content"
-        arrowClasses="stroke-content group-hover:stroke-primary"
-        to={`/homes/${id}`}
-      />
+      <div className="sm:mt-auto">
+        <NavLinkButton
+          className="text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content mt-8 sm:text-xl"
+          text="View Details"
+          bgClasses="bg-content"
+          arrowClasses="stroke-content group-hover:stroke-primary"
+          to={`/homes/${id}`}
+        />
+      </div>
     </div>
   );
 };

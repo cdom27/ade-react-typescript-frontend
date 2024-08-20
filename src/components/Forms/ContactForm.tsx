@@ -56,7 +56,7 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
     >
       {({ isSubmitting, setFieldValue }) => (
-        <Form className="space-y-6 flex flex-col pt-8">
+        <Form className="space-y-6 flex flex-col pt-8 sm:w-5/6 sm:mx-auto">
           <Input
             name="name"
             type="text"

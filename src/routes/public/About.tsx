@@ -19,26 +19,26 @@ const About = () => {
   return (
     <PageLayout>
       <section className="relative">
-        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6">
+        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6 sm:text-5xl">
           Homegrown in San Diego, California
         </h1>
         <VideoHero videoSources={videoSources} posterSource={posterSource} />
       </section>
 
       <section className="px-6 py-20 font-haas_roman text-center">
-        <h2 className="text-4xl font-editorial_ul text-center">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           We Never Forget Our Roots
         </h2>
 
         <img
           src="https://db36hfj0unq27.cloudfront.net/regular-content/father-son.webp"
           alt="Beautiful home in San Diego made by Ade San Diego Home Builders"
-          className="rounded-xl object-cover mt-8 "
+          className="rounded-xl object-cover mt-8 sm:w-1/2 sm:mx-auto"
         />
-        <h3 className="text-3xl font-editorial_ul pt-20 text-left">
+        <h3 className="text-3xl font-editorial_ul pt-20 text-left sm:text-4xl">
           Ade Started as a Father-Son Small Business
         </h3>
-        <div className="pt-8 space-y-4 text-left">
+        <div className="pt-8 space-y-4 text-left sm:text-xl">
           <p>
             Founded with a vision to transform the residential landscape of San
             Diego, our company prides itself on delivering homes and apartments
@@ -52,14 +52,14 @@ const About = () => {
         </div>
         <div className="flex flex-col gap-4 pt-8">
           <NavLinkButton
-            className="text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content"
+            className="text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content sm:text-xl"
             text="View Our Homes"
             bgClasses="bg-content"
             arrowClasses="stroke-content group-hover:stroke-primary"
             to="/homes"
           />
           <NavLinkButton
-            className="text-content border-content hover:border-accent active:border-accent"
+            className="text-content border-content hover:border-accent active:border-accent sm:text-xl"
             text="View Our Services"
             bgClasses="bg-accent"
             arrowClasses="stroke-content"
@@ -67,7 +67,7 @@ const About = () => {
           />
 
           <NavLinkButton
-            className="text-content border-content hover:border-accent active:border-accent"
+            className="text-content border-content hover:border-accent active:border-accent sm:text-xl"
             text="Contact Us"
             bgClasses="bg-accent"
             arrowClasses="stroke-content"
