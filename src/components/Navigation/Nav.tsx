@@ -90,7 +90,7 @@ const Nav = () => {
   return (
     <nav
       ref={navRef}
-      className="bg-primary border-content border-[1px] border-opacity-20 fixed top-4 left-6 right-6 z-50 py-4 px-8 rounded-md text-content md:left-20 md:right-20"
+      className="bg-primary border-content border-[1px] border-opacity-20 fixed top-4 left-6 right-6 z-50 py-4 px-8 rounded-md text-content md:left-20 md:right-20 lg:left-28 lg:right-28"
     >
       <div className="flex items-center justify-between">
         <NavLink to="/">

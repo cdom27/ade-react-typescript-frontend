@@ -4,7 +4,7 @@ import { Arrow } from '../Icons';
 
 const Footer = () => {
   return (
-    <footer className="px-6 py-20 text-center bg-leafs bg-cover md:px-20">
+    <footer className="px-6 py-20 text-center bg-leafs bg-cover md:px-20 lg:px-28">
       <h2 className="text-4xl font-editorial_ul_italic text-primary sm:text-5xl">
         Embrace San Diego With Ade
       </h2>

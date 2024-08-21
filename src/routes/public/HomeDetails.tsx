@@ -64,7 +64,7 @@ const HomeDetails = () => {
           />
         </section>
 
-        <section className="px-6 py-20 font-haas_roman text-center md:px-20">
+        <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28">
           <div className="flex flex-col space-y-8">
             <h1 className="text-4xl font-editorial_ul text-content sm:text-5xl">
               {home.address}
@@ -112,7 +112,7 @@ const HomeDetails = () => {
           </div>
         </section>
 
-        <section className="px-6 pb-20 font-haas_roman text-left md:px-20">
+        <section className="px-6 pb-20 font-haas_roman text-left md:px-20 lg:px-28">
           <h2 className="text-4xl font-editorial_ul text-left pb-2">
             Facts And Features
           </h2>
@@ -190,7 +190,7 @@ const HomeDetails = () => {
           </Accordion>
         </section>
 
-        <section className="px-6 pb-20 font-haas_roman text-left md:px-20">
+        <section className="px-6 pb-20 font-haas_roman text-left md:px-20 lg:px-28">
           <h2 className="text-4xl font-editorial_ul text-left pb-2">
             Home Gallery
           </h2>

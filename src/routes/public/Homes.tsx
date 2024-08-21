@@ -74,7 +74,7 @@ const Homes = () => {
         <VideoHero videoSources={videoSources} posterSource={posterSource} />
       </section>
 
-      <section className="px-6 py-20 font-haas_roman md:px-20">
+      <section className="px-6 py-20 font-haas_roman md:px-20 lg:px-28">
         <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Life Is Too Short To Settle On A Home
         </h2>

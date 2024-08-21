@@ -27,7 +27,7 @@ const Approach = () => {
         <VideoHero videoSources={videoSources} posterSource={posterSource} />
       </section>
 
-      <section className="px-6 py-20 font-haas_roman text-center md:px-20">
+      <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28">
         <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           We Play Match-Maker
         </h2>
@@ -49,26 +49,26 @@ const Approach = () => {
           />
         </div>
 
-        <div className="grid cols-2 pt-8 gap-x-8 w-full">
+        <div className="grid cols-2 pt-8 gap-x-8 w-full md:mx-auto lg:w-4/5">
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/mm-1.webp"
             alt="Beautiful home in San Diego made by Ade San Diego Home Builders"
-            className="col-span-1 rounded-xl h-[170px] object-cover mt-8 sm:h-[200px]"
+            className="col-span-1 rounded-xl h-[170px] object-cover mt-8 sm:h-[200px] lg:h-[250px]"
           />
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/mm-3.webp"
             alt="Scenic view of San Diego. Ade San Diego Home Builders"
-            className="col-span-1 rounded-xl h-[170px] object-cover object-left-bottom sm:h-[200px]"
+            className="col-span-1 rounded-xl h-[170px] object-cover object-left-bottom sm:h-[200px] lg:h-[250px]"
           />
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/mm-2.webp"
             alt="Beautiful community in San Diego. Ade San Diego Home Builders"
-            className="col-span-2 mx-auto rounded-lg max-w-[200px] mt-8 sm:max-w-[250px]"
+            className="col-span-2 mx-auto rounded-lg max-w-[200px] mt-8 sm:max-w-[250px] lg:max-w-[300px]"
           />
         </div>
       </section>
 
-      <section className="bg-leafs bg-cover font-haas_roman bg-center h-full text-primary px-6 py-20 md:px-20">
+      <section className="bg-leafs bg-cover font-haas_roman bg-center h-full text-primary px-6 py-20 md:px-20 lg:px-28">
         <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Fortify What&apos;s Good About{' '}
           <span className="font-editorial_ul_italic text-accent">Life</span>
@@ -104,7 +104,7 @@ const Approach = () => {
         </div>
       </section>
 
-      <section className="px-6 py-20 font-haas_roman text-center md:px-20">
+      <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28">
         <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
           Here&apos;s How We Do It At Ade
         </h2>
