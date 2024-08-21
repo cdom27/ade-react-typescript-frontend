@@ -99,10 +99,40 @@ const Nav = () => {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="font-fraktion_reg text-sm sm:text-xl"
+          className="font-fraktion_reg text-sm sm:text-xl lg:hidden"
         >
           {isOpen ? 'CLOSE' : 'MENU'}
         </button>
+        <ul className="hidden lg:flex lg:space-x-8 lg:items-center">
+          {links.map((link, index) => (
+            <li
+              key={link.href}
+              ref={(el) => (listItemRef.current[index] = el)}
+              className="self-start my-auto"
+            >
+              <NavLink
+                to={link.href}
+                onClick={() => setIsOpen(false)}
+                className={({ isActive }) =>
+                  `${
+                    isActive ? 'text-lime-700' : 'text-content'
+                  } font-fraktion_reg text-md`
+                }
+              >
+                {link.name}
+              </NavLink>
+            </li>
+          ))}
+          <li ref={(el) => (listItemRef.current[links.length] = el)}>
+            <NavLinkButton
+              className="text-accent hover:text-content border-none bg-content hover:bg-accent active:bg-accent px-6 py-2 lg:space-x-2"
+              text="GET IN TOUCH"
+              to="/contact"
+              bgClasses="bg-accent"
+              arrowClasses="stroke-accent group-hover:stroke-content rotate-[-45deg] lg:mt-1"
+            />
+          </li>
+        </ul>
       </div>
 
       {/* Extended mobile nav */}
