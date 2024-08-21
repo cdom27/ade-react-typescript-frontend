@@ -89,7 +89,7 @@ const VisitRequestModalForm = ({ isOpen, onClose }: VisitReqModalProps) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center text-content z-50">
-      <div className="bg-primary p-8 rounded-lg w-full flex flex-col items-center max-h-screen overflow-y-auto sm:mx-5 md:mx-20">
+      <div className="bg-primary p-8 rounded-lg w-full flex flex-col items-center max-h-screen overflow-y-auto sm:mx-5 md:mx-20 lg:w-1/2 lg:h-5/6">
         <button type="button" onClick={onClose} className="mx-auto">
           <Plus className="size-5 stroke-content rotate-45 mb-8 sm:size-10" />
         </button>

@@ -74,19 +74,19 @@ const Homes = () => {
         <VideoHero videoSources={videoSources} posterSource={posterSource} />
       </section>
 
-      <section className="px-6 py-20 font-haas_roman md:px-20 lg:px-28">
-        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
+      <section className="px-6 py-20 font-haas_roman md:px-20 lg:px-28 lg:py-36">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:w-1/2 lg:mx-auto">
           Life Is Too Short To Settle On A Home
         </h2>
-        <p className="pt-8 text-center sm:text-xl">
+        <p className="pt-8 text-center sm:text-xl lg:w-2/3 lg:mx-auto">
           There&apos;s nothing quite like an Ade home. Browse through our unique
           homes and schedule a visit with our experts.
         </p>
-        <h3 className="text-3xl font-editorial_ul pt-8 text-left sm:text-4xl">
+        <h3 className="text-3xl font-editorial_ul pt-8 text-left sm:text-4xl lg:pt-20 lg:text-center">
           Dream Homes By Ade
         </h3>
 
-        <div className="space-y-16 pb-28 pt-10 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-16 sm:space-y-0">
+        <div className="space-y-16 pb-28 pt-10 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-16 sm:space-y-0 lg:gap-x-20 lg:pt-24">
           {homes.map((home) => (
             <HomeCard key={home.id} {...home} />
           ))}

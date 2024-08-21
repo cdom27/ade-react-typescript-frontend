@@ -27,29 +27,49 @@ const Approach = () => {
         <VideoHero videoSources={videoSources} posterSource={posterSource} />
       </section>
 
-      <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28">
-        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
-          We Play Match-Maker
-        </h2>
-        <div className="pt-4 space-y-4 sm:text-xl">
-          <p>
-            Ade has crafted a collection of dream homes, and it&apos;s time for
-            you to find your perfect match.
-          </p>
-          <p>
-            Meet our charming lineup of homes, or work with us to create your
-            perfect multi-generational household.
-          </p>
-          <NavLinkButton
-            className="text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content mt-8"
-            text="Find My Dream Home"
-            bgClasses="bg-content"
-            arrowClasses="stroke-content group-hover:stroke-primary"
-            to="/homes"
+      <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28 lg:py-36">
+        <div className="lg:flex lg:justify-between">
+          <img
+            src="https://db36hfj0unq27.cloudfront.net/regular-content/mm-1.webp"
+            alt="Beautiful home in San Diego made by Ade San Diego Home Builders"
+            className="hidden rounded-xl h-[170px] object-cover mt-8 lg:h-[250px] lg:block lg:mt-36 lg:w-1/4"
+          />
+          <div className="lg:w-1/3">
+            <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
+              We Play Match-Maker
+            </h2>
+            <div className="pt-4 space-y-4 sm:text-xl">
+              <p>
+                Ade has crafted a collection of dream homes, and it&apos;s time
+                for you to find your perfect match.
+              </p>
+              <p>
+                Meet our charming lineup of homes, or work with us to create
+                your perfect multi-generational household.
+              </p>
+              <NavLinkButton
+                className="text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content mt-8"
+                text="Find A Home"
+                bgClasses="bg-content"
+                arrowClasses="stroke-content group-hover:stroke-primary"
+                to="/homes"
+              />
+            </div>
+          </div>
+          <img
+            src="https://db36hfj0unq27.cloudfront.net/regular-content/mm-3.webp"
+            alt="Scenic view of San Diego. Ade San Diego Home Builders"
+            className="hidden rounded-xl h-[170px] object-cover mt-8 lg:h-[250px] lg:block lg:mt-56 lg:w-1/4"
           />
         </div>
 
-        <div className="grid cols-2 pt-8 gap-x-8 w-full md:mx-auto lg:w-4/5">
+        <img
+          src="https://db36hfj0unq27.cloudfront.net/regular-content/mm-2.webp"
+          alt="Beautiful community in San Diego. Ade San Diego Home Builders"
+          className="hidden mx-auto rounded-lg max-w-[200px] mt-8 sm:max-w-[250px] lg:max-w-[400px] lg:block lg:mt-14"
+        />
+
+        <div className="grid cols-2 pt-8 gap-x-8 w-full md:mx-auto lg:w-4/5 lg:hidden">
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/mm-1.webp"
             alt="Beautiful home in San Diego made by Ade San Diego Home Builders"
@@ -68,87 +88,93 @@ const Approach = () => {
         </div>
       </section>
 
-      <section className="bg-leafs bg-cover font-haas_roman bg-center h-full text-primary px-6 py-20 md:px-20 lg:px-28">
-        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
-          Fortify What&apos;s Good About{' '}
-          <span className="font-editorial_ul_italic text-accent">Life</span>
-        </h2>
-        <div className="pt-8 space-y-4 sm:text-xl">
-          <p>
-            Finding the missing key to your home can shift your world from the
-            inside out.
-          </p>
-          <p>
-            We understand that building a home is a deeply personal journey. Our
-            custom home building process is designed to be collaborative and
-            client-focused, ensuring that every detail aligns with your vision.
-            From the initial consultation to the final walkthrough, our team of
-            expert builders and designers work closely with you to create a home
-            that is uniquely yours.
-          </p>
+      <section className="bg-leafs bg-cover font-haas_roman bg-center h-full text-primary px-6 py-20 md:px-20 lg:px-28 lg:py-36 lg:grid-cols-2 lg:grid lg:gap-x-20">
+        <div>
+          <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:text-left">
+            Fortify What&apos;s Good About{' '}
+            <span className="font-editorial_ul_italic text-accent">Life</span>
+          </h2>
+          <div className="pt-8 space-y-4 sm:text-xl">
+            <p>
+              Finding the missing key to your home can shift your world from the
+              inside out.
+            </p>
+            <p>
+              We understand that building a home is a deeply personal journey.
+              Our custom home building process is designed to be collaborative
+              and client-focused, ensuring that every detail aligns with your
+              vision. From the initial consultation to the final walkthrough,
+              our team of expert builders and designers work closely with you to
+              create a home that is uniquely yours.
+            </p>
+          </div>
+          <NavLinkButton
+            className="text-primary hover:text-content border-primary hover:border-accent active:border-accent hover:bg-accent active:bg-accent mt-8 sm:text-xl"
+            text="Learn More"
+            bgClasses="bg-accent"
+            arrowClasses="stroke-primary group-hover:stroke-content"
+            to="/approach"
+          />
         </div>
-        <NavLinkButton
-          className="text-primary hover:text-content border-primary hover:border-accent active:border-accent hover:bg-accent active:bg-accent mt-8 sm:text-xl"
-          text="Learn More"
-          bgClasses="bg-accent"
-          arrowClasses="stroke-primary group-hover:stroke-content"
-          to="/approach"
-        />
-
         <div className="grid grid-cols-1 gap-y-8 pt-10">
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/approach-people-poster.webp"
             alt="Family in San Diego, California. Shot By Ade Home Builders in San Diego"
-            className="col-span-1 rounded-lg max-h-[200px] w-full object-cover sm:max-h-[500px] sm:w-4/5 sm:mx-auto"
+            className="col-span-1 rounded-lg max-h-[200px] w-full object-cover sm:max-h-[500px] sm:w-4/5 sm:mx-auto lg:w-full"
           />
         </div>
       </section>
 
-      <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28">
-        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
+      <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28 lg:py-36">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:w-1/2 lg:mx-auto">
           Here&apos;s How We Do It At Ade
         </h2>
 
-        <p className="pt-8 sm:text-xl">
+        <p className="pt-8 sm:text-xl lg:w-1/2 lg:mx-auto">
           Give us call, drop by our offices, or send us a message, whatever
           works best for you.
         </p>
 
-        <h3 className="text-3xl font-editorial_ul pt-20 text-left sm:text-4xl">
-          The Pregame
-        </h3>
-        <div className="pt-4 space-y-4 text-left sm:text-xl">
-          <p>
-            We understand that building a home is a deeply personal journey. Our
-            custom home building process is designed to be collaborative and
-            client-focused, ensuring that every detail aligns with your vision.
-            From the initial consultation to the final walkthrough, our team of
-            expert builders and designers work closely with you to create a home
-            that is uniquely yours.
-          </p>
-          <p>
-            We start with a comprehensive planning phase where we discuss your
-            preferences, lifestyle, and budget. Our architects and designers
-            then craft detailed plans that incorporate your ideas while
-            optimizing for functionality and aesthetics.
-          </p>
+        <div className="lg:grid lg:grid-cols-2 lg:gap-x-20">
+          <div>
+            <h3 className="text-3xl font-editorial_ul pt-20 text-left sm:text-4xl">
+              The Pregame
+            </h3>
+            <div className="pt-4 space-y-4 text-left sm:text-xl">
+              <p>
+                We understand that building a home is a deeply personal journey.
+                Our custom home building process is designed to be collaborative
+                and client-focused, ensuring that every detail aligns with your
+                vision. From the initial consultation to the final walkthrough,
+                our team of expert builders and designers work closely with you
+                to create a home that is uniquely yours.
+              </p>
+              <p>
+                We start with a comprehensive planning phase where we discuss
+                your preferences, lifestyle, and budget. Our architects and
+                designers then craft detailed plans that incorporate your ideas
+                while optimizing for functionality and aesthetics.
+              </p>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-3xl font-editorial_ul pt-20 text-left sm:text-4xl">
+              Game Time
+            </h3>
+
+            <p className="pt-4 text-left sm:text-xl">
+              Throughout the construction phase, we maintain open communication,
+              providing regular updates and addressing any concerns promptly.
+              The result is a custom-built home that reflects your personality
+              and meets your exact specifications.
+            </p>
+          </div>
         </div>
-
-        <h3 className="text-3xl font-editorial_ul pt-20 text-left sm:text-4xl">
-          Game Time
-        </h3>
-
-        <p className="pt-4 text-left sm:text-xl">
-          Throughout the construction phase, we maintain open communication,
-          providing regular updates and addressing any concerns promptly. The
-          result is a custom-built home that reflects your personality and meets
-          your exact specifications.
-        </p>
 
         <h3 className="text-3xl font-editorial_ul pt-20 text-left sm:text-4xl">
           A Deeper Dive Into Our Process
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 mt-8 space-y-12 sm:space-y-0 sm:gap-8 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 mt-8 space-y-12 sm:space-y-0 sm:gap-8 lg:gap-20">
           <ProcessCard
             title="1"
             imgUrl="https://db36hfj0unq27.cloudfront.net/regular-content/process-1.webp"

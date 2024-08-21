@@ -25,19 +25,19 @@ const Services = () => {
         <VideoHero videoSources={videoSources} posterSource={posterSource} />
       </section>
 
-      <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28">
-        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
+      <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28 lg:py-36">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:w-1/2 lg:mx-auto">
           Three Decade Of Experience
         </h2>
-        <p className="pt-8 sm:text-xl">
+        <p className="pt-8 sm:text-xl lg:w-2/3 lg:mx-auto">
           We don&apos;t like convoluted plans. In order to assist in the
           daunting process that comes with residential construction, we have
           simplified our service offerings.
         </p>
-        <h3 className="text-3xl font-editorial_ul pt-8 text-left sm:text-4xl">
+        <h3 className="text-3xl font-editorial_ul pt-8 text-left sm:text-4xl lg:pt-20">
           Our Services At Ade
         </h3>
-        <div className="flex flex-col gap-y-8">
+        <div className="flex flex-col gap-y-8 lg:grid lg:grid-cols-2 lg:mt-2 lg:gap-14">
           <div>
             <h4 className="text-2xl font-editorial_ul pt-8 text-left sm:text-3xl">
               Custom Home Building

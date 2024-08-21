@@ -64,55 +64,57 @@ const HomeDetails = () => {
           />
         </section>
 
-        <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28">
-          <div className="flex flex-col space-y-8">
+        <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28 lg:py-36">
+          <div className="flex flex-col space-y-8 lg:text-left">
             <h1 className="text-4xl font-editorial_ul text-content sm:text-5xl">
               {home.address}
             </h1>
-            <p className="sm:text-xl">{home.overview}</p>
+            <p className="sm:text-xl lg:w-2/3">{home.overview}</p>
           </div>
 
-          <div className="pt-14">
-            <h2 className="text-4xl font-editorial_ul text-left ">
-              What&apos;s Special?
-            </h2>
-            <ul className="grid grid-cols-1 gap-y-3 pt-6 text-sm sm:text-lg px-6">
-              {home.whatsSpecial.map((item) => (
-                <li
-                  key={item}
-                  className="font-fraktion_reg bg-content bg-opacity-20 rounded-full py-3 px-6 sm:w-3/4 sm:mx-auto"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div className="lg:flex lg:justify-between">
+            <div className="pt-14 lg:w-1/3">
+              <h2 className="text-4xl font-editorial_ul text-left">
+                What&apos;s Special?
+              </h2>
+              <ul className="grid grid-cols-1 gap-y-3 pt-6 text-sm sm:text-lg px-6 lg:flex-wrap lg:px-0">
+                {home.whatsSpecial.map((item) => (
+                  <li
+                    key={item}
+                    className="font-fraktion_reg bg-content bg-opacity-20 rounded-full py-3 px-6 sm:w-3/4 sm:mx-auto lg:text-sm lg:py-2 lg:mx-0 lg:w-auto lg:self-start"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div className="pt-14">
-            <h2 className="text-4xl font-editorial_ul text-left">
-              Quick Details
-            </h2>
-            <ul className="grid grid-cols-2 font-haas_md text-lg gap-x-3 mt-6 text-left sm:text-2xl">
-              <li>${home.cost.toLocaleString()}</li>
-              <li>Built {home.yearBuilt}</li>
-              <li>{home.livableAreaSize} home</li>
-              <li>{home.bedrooms} Bed</li>
-              <li>{home.lotSize} lot</li>
-              <li>{home.bathrooms} Bath</li>
-            </ul>
+            <div className="pt-14">
+              <h2 className="text-4xl font-editorial_ul text-left">
+                Quick Details
+              </h2>
+              <ul className="grid grid-cols-2 font-haas_md text-lg gap-x-3 mt-6 text-left sm:text-2xl">
+                <li>${home.cost.toLocaleString()}</li>
+                <li>Built {home.yearBuilt}</li>
+                <li>{home.livableAreaSize} home</li>
+                <li>{home.bedrooms} Bed</li>
+                <li>{home.lotSize} lot</li>
+                <li>{home.bathrooms} Bath</li>
+              </ul>
 
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="group relative overflow-hidden font-fraktion_reg flex items-center justify-between text-md border-[2px] rounded-full px-9 py-4 transition-colors duration-300 ease-in-out text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content mt-8 w-full sm:text-xl"
-            >
-              <span className="relative z-10">Schedule A Visit</span>
-              <Arrow className="size-5 relative z-10 transition-colors duration-300 ease-in-out stroke-content group-hover:stroke-primary rotate-[-45deg]" />
-              <div className="absolute inset-0 transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0 bg-content" />
-            </button>
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="group relative overflow-hidden font-fraktion_reg flex items-center justify-between text-md border-[2px] rounded-full px-9 py-4 transition-colors duration-300 ease-in-out text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content mt-8 w-full sm:text-xl"
+              >
+                <span className="relative z-10">Schedule A Visit</span>
+                <Arrow className="size-5 relative z-10 transition-colors duration-300 ease-in-out stroke-content group-hover:stroke-primary rotate-[-45deg]" />
+                <div className="absolute inset-0 transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0 bg-content" />
+              </button>
+            </div>
           </div>
         </section>
 
-        <section className="px-6 pb-20 font-haas_roman text-left md:px-20 lg:px-28">
+        <section className="px-6 pb-20 font-haas_roman text-left md:px-20 lg:px-28 lg:pb-36">
           <h2 className="text-4xl font-editorial_ul text-left pb-2">
             Facts And Features
           </h2>
@@ -190,11 +192,11 @@ const HomeDetails = () => {
           </Accordion>
         </section>
 
-        <section className="px-6 pb-20 font-haas_roman text-left md:px-20 lg:px-28">
+        <section className="px-6 pb-20 font-haas_roman text-left md:px-20 lg:px-28 lg:pb-36">
           <h2 className="text-4xl font-editorial_ul text-left pb-2">
             Home Gallery
           </h2>
-          <div className="gap-4 grid grid-cols-1 mt-6 sm:grid-cols-2 sm:gap-8">
+          <div className="gap-4 grid grid-cols-1 mt-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
             {home.photoGallery.map((photo) => (
               <img
                 key={photo}

@@ -13,8 +13,10 @@ const ProcessCard = ({ title, children, imgUrl }: ProcessCardProps) => {
         alt={title}
         className="rounded-xl object-cover h-[300px] w-full"
       />
-      <h3 className="text-3xl font-editorial_ul pt-4 text-left">{title}</h3>
-      <div className="pt-4 space-y-4">{children}</div>
+      <div>
+        <h3 className="text-3xl font-editorial_ul pt-4 text-left">{title}</h3>
+        <div className="pt-4 space-y-4">{children}</div>
+      </div>
     </div>
   );
 };
