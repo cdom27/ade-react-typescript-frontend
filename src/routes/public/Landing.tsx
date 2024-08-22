@@ -24,7 +24,7 @@ const Landing = () => {
   return (
     <PageLayout>
       <section className="relative">
-        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6 sm:text-5xl">
+        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6 sm:text-5xl 2xl:text-6xl">
           Capture The{' '}
           <span className="font-editorial_ul_italic">Essence of San Diego</span>{' '}
           In Your Home
@@ -40,7 +40,7 @@ const Landing = () => {
             className="hidden rounded-xl h-[170px] object-cover mt-8 lg:h-[250px] lg:block lg:mt-36 lg:w-1/4"
           />
           <div className="lg:w-1/3">
-            <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
+            <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl 2xl:text-6xl">
               Industry Leading Experience
             </h2>
             <ul className="pt-8 sm:text-xl">
@@ -94,7 +94,7 @@ const Landing = () => {
 
       <section className="bg-leafs bg-cover font-haas_roman bg-center h-full text-primary px-6 py-20 md:px-20 lg:px-28 lg:py-36 lg:grid lg:grid-cols-2 lg:gap-x-20">
         <div>
-          <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:text-left">
+          <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:text-left 2xl:text-6xl">
             Embody The{' '}
             <span className="font-editorial_ul_italic text-accent">
               Vibrant Spirit of San Diego
@@ -113,7 +113,7 @@ const Landing = () => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4 pt-4 lg:pt-8">
+          <div className="flex flex-col gap-4 pt-4 lg:pt-8 xl:flex-row">
             <NavLinkButton
               className="text-primary hover:text-content border-primary hover:border-accent active:border-accent hover:bg-accent active:bg-accent xl:self-start xl:space-x-4"
               text="View Our Services"
@@ -162,7 +162,7 @@ const Landing = () => {
       </section>
 
       <section className="px-6 py-20 font-haas_roman md:px-20 lg:px-28 lg:py-36">
-        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:w-1/2 lg:mx-auto">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:w-1/2 lg:mx-auto 2xl:text-6xl">
           Let's Chat About Your{' '}
           <span className="font-editorial_ul_italic">Dream Home</span>
         </h2>
@@ -187,8 +187,8 @@ const Landing = () => {
             </a>
             <div className="pt-8 space-y-4 font-haas_md sm:text-xl">
               <p>
-                Unscheduled visits or general inquiries are taken starting from
-                10AM to 1PM.
+                Unscheduled visits or general inquiries are taken from 10AM to
+                1PM.
               </p>
               <p>Total office hours are from 7AM to 6PM.</p>
             </div>
@@ -218,7 +218,7 @@ const Landing = () => {
       </section>
 
       <section className="px-6 py-20 bg-accent space-y-8 md:px-20 lg:px-28 lg:py-36 lg:grid lg:grid-cols-2 lg:gap-x-20 lg:space-y-0">
-        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:text-left">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:text-left 2xl:text-6xl">
           Answers To Some{' '}
           <span className="font-editorial_ul_italic">Popular Questions</span>
         </h2>

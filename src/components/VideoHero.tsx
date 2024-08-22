@@ -67,7 +67,7 @@ const VideoHero = ({ videoSources, posterSource }: VideoHeroProps) => {
   return (
     <div className="overflow-hidden h-[400px] sm:h-[550px] w-full lg:h-auto">
       <video
-        className="h-full object-cover"
+        className="h-full object-cover 2xl:w-full"
         autoPlay
         muted
         playsInline

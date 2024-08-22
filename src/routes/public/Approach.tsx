@@ -21,7 +21,7 @@ const Approach = () => {
   return (
     <PageLayout>
       <section className="relative">
-        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul_italic text-primary mt-20 px-6 sm:text-5xl">
+        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul_italic text-primary mt-20 px-6 sm:text-5xl 2xl:text-6xl">
           Thriving On Excitement
         </h1>
         <VideoHero videoSources={videoSources} posterSource={posterSource} />
@@ -35,10 +35,10 @@ const Approach = () => {
             className="hidden rounded-xl h-[170px] object-cover mt-8 lg:h-[250px] lg:block lg:mt-36 lg:w-1/4"
           />
           <div className="lg:w-1/3">
-            <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
+            <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl 2xl:text-6xl">
               We Play Match-Maker
             </h2>
-            <div className="pt-4 space-y-4 sm:text-xl">
+            <div className="pt-4 space-y-4 sm:text-xl flex flex-col">
               <p>
                 Ade has crafted a collection of dream homes, and it&apos;s time
                 for you to find your perfect match.
@@ -48,7 +48,7 @@ const Approach = () => {
                 your perfect multi-generational household.
               </p>
               <NavLinkButton
-                className="text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content mt-8"
+                className="text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content mt-8 lg:self-start lg:space-x-4 lg:mx-auto"
                 text="Find A Home"
                 bgClasses="bg-content"
                 arrowClasses="stroke-content group-hover:stroke-primary"
@@ -90,7 +90,7 @@ const Approach = () => {
 
       <section className="bg-leafs bg-cover font-haas_roman bg-center h-full text-primary px-6 py-20 md:px-20 lg:px-28 lg:py-36 lg:grid-cols-2 lg:grid lg:gap-x-20">
         <div className="xl:flex xl:flex-col">
-          <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:text-left">
+          <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:text-left 2xl:text-6xl 2xl:w-3/4">
             Fortify What&apos;s Good About{' '}
             <span className="font-editorial_ul_italic text-accent">Life</span>
           </h2>
@@ -126,11 +126,11 @@ const Approach = () => {
       </section>
 
       <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28 lg:py-36">
-        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:w-1/2 lg:mx-auto">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:w-1/2 lg:mx-auto 2xl:text-6xl">
           Here&apos;s How We Do It At Ade
         </h2>
 
-        <p className="pt-8 sm:text-xl lg:w-1/2 lg:mx-auto">
+        <p className="pt-8 sm:text-xl lg:w-1/2 lg:mx-auto 2xl:w-1/3">
           Give us call, drop by our offices, or send us a message, whatever
           works best for you.
         </p>
@@ -174,7 +174,7 @@ const Approach = () => {
         <h3 className="text-3xl font-editorial_ul pt-20 text-left sm:text-4xl">
           A Deeper Dive Into Our Process
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 mt-8 space-y-12 sm:space-y-0 sm:gap-8 lg:gap-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 mt-8 space-y-12 sm:space-y-0 sm:gap-8 lg:gap-20 2xl:grid-cols-3">
           <ProcessCard
             title="1"
             imgUrl="https://db36hfj0unq27.cloudfront.net/regular-content/process-1.webp"

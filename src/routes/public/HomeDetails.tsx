@@ -50,7 +50,7 @@ const HomeDetails = () => {
     return (
       <PageLayout>
         <section className="relative">
-          <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6 sm:text-5xl">
+          <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6 sm:text-5xl 2xl:text-6xl">
             {home.address}
           </h1>
           <img
@@ -60,13 +60,13 @@ const HomeDetails = () => {
             decoding="auto"
             role="img"
             aria-label={`Image of ${home.address}`}
-            className="overflow-hidden h-[400px] object-cover sm:h-[550px] w-full"
+            className="overflow-hidden h-[400px] object-cover sm:h-[550px] w-full xl:h-full"
           />
         </section>
 
         <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28 lg:py-36">
           <div className="flex flex-col space-y-8 lg:text-left">
-            <h1 className="text-4xl font-editorial_ul text-content sm:text-5xl">
+            <h1 className="text-4xl font-editorial_ul text-content sm:text-5xl 2xl:text-6xl">
               {home.address}
             </h1>
             <p className="sm:text-xl lg:w-2/3">{home.overview}</p>
@@ -196,7 +196,7 @@ const HomeDetails = () => {
           <h2 className="text-4xl font-editorial_ul text-left pb-2">
             Home Gallery
           </h2>
-          <div className="gap-4 grid grid-cols-1 mt-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
+          <div className="gap-4 grid grid-cols-1 mt-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 xl:grid-cols-4">
             {home.photoGallery.map((photo) => (
               <img
                 key={photo}
@@ -206,7 +206,7 @@ const HomeDetails = () => {
                 decoding="async"
                 role="img"
                 aria-label={`Image of ${home.address}`}
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover 2xl:w-full 2xl:h-[228px]"
               />
             ))}
           </div>

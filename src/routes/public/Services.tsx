@@ -19,22 +19,22 @@ const Services = () => {
   return (
     <PageLayout>
       <section className="relative">
-        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6 sm:text-5xl">
+        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6 sm:text-5xl 2xl:text-6xl">
           Everything You Need, By Ade
         </h1>
         <VideoHero videoSources={videoSources} posterSource={posterSource} />
       </section>
 
       <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28 lg:py-36">
-        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:w-1/2 lg:mx-auto">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:w-1/2 lg:mx-auto 2xl:text-6xl">
           Three Decade Of Experience
         </h2>
-        <p className="pt-8 sm:text-xl lg:w-2/3 lg:mx-auto">
+        <p className="pt-8 sm:text-xl lg:w-2/3 lg:mx-auto 2xl:w-1/2">
           We don&apos;t like convoluted plans. In order to assist in the
           daunting process that comes with residential construction, we have
           simplified our service offerings.
         </p>
-        <h3 className="text-3xl font-editorial_ul pt-8 text-left sm:text-4xl lg:pt-20">
+        <h3 className="text-3xl font-editorial_ul pt-8 text-left sm:text-4xl lg:pt-20 2xl:text-5xl">
           Our Services At Ade
         </h3>
         <div className="flex flex-col gap-y-8 lg:grid lg:grid-cols-2 lg:mt-2 lg:gap-14">

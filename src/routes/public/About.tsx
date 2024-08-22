@@ -19,21 +19,21 @@ const About = () => {
   return (
     <PageLayout>
       <section className="relative">
-        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6 sm:text-5xl">
+        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6 sm:text-5xl 2xl:text-6xl">
           Homegrown in San Diego, California
         </h1>
         <VideoHero videoSources={videoSources} posterSource={posterSource} />
       </section>
 
       <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28 lg:py-36">
-        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:w-1/2 lg:mx-auto">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:w-1/2 lg:mx-auto 2xl:text-6xl">
           We Never Forget Our Roots
         </h2>
 
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-20 lg:mt-20 xl:w-3/4 xl:mx-auto">
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/father-son.webp"
-            alt="Beautiful home in San Diego made by Ade San Diego Home Builders"
+            alt="The owner of Ade San Diego Home Builders, with his young son. They started a concrete repair business before Ade was founded."
             className="rounded-xl object-cover mt-8 sm:w-1/2 sm:mx-auto lg:mx-0 lg:w-full lg:mt-0"
           />
           <div>

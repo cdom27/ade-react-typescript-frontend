@@ -20,7 +20,7 @@ const Contact = () => {
   return (
     <PageLayout>
       <section className="relative">
-        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6 sm:text-5xl">
+        <h1 className="absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6 sm:text-5xl 2xl:text-6xl">
           Peace In{' '}
           <span className="font-editorial_ul_italic">Your Home, From Us</span>{' '}
         </h1>
@@ -28,7 +28,7 @@ const Contact = () => {
       </section>
 
       <section className="px-6 py-20 font-haas_roman md:px-20 lg:px-28 lg:py-36">
-        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:w-1/2 lg:mx-auto">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:w-1/2 lg:mx-auto 2xl:text-6xl">
           Let's Chat About Your{' '}
           <span className="font-editorial_ul_italic">Dream Home</span>
         </h2>
@@ -53,8 +53,8 @@ const Contact = () => {
             </a>
             <div className="pt-8 space-y-4 font-haas_md sm:text-xl">
               <p>
-                Unscheduled visits or general inquiries are taken starting from
-                10AM to 1PM.
+                Unscheduled visits or general inquiries are taken from 10AM to
+                1PM.
               </p>
               <p>Total office hours are from 7AM to 6PM.</p>
             </div>
