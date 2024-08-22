@@ -89,7 +89,7 @@ const Approach = () => {
       </section>
 
       <section className="bg-leafs bg-cover font-haas_roman bg-center h-full text-primary px-6 py-20 md:px-20 lg:px-28 lg:py-36 lg:grid-cols-2 lg:grid lg:gap-x-20">
-        <div>
+        <div className="xl:flex xl:flex-col">
           <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:text-left">
             Fortify What&apos;s Good About{' '}
             <span className="font-editorial_ul_italic text-accent">Life</span>
@@ -109,7 +109,7 @@ const Approach = () => {
             </p>
           </div>
           <NavLinkButton
-            className="text-primary hover:text-content border-primary hover:border-accent active:border-accent hover:bg-accent active:bg-accent mt-8 sm:text-xl"
+            className="text-primary hover:text-content border-primary hover:border-accent active:border-accent hover:bg-accent active:bg-accent mt-8 sm:text-xl xl:self-start xl:space-x-4"
             text="Learn More"
             bgClasses="bg-accent"
             arrowClasses="stroke-primary group-hover:stroke-content"

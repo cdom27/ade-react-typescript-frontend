@@ -113,16 +113,16 @@ const Landing = () => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4 pt-4">
+          <div className="flex flex-col gap-4 pt-4 lg:pt-8">
             <NavLinkButton
-              className="text-primary hover:text-content border-primary hover:border-accent active:border-accent hover:bg-accent active:bg-accent "
+              className="text-primary hover:text-content border-primary hover:border-accent active:border-accent hover:bg-accent active:bg-accent xl:self-start xl:space-x-4"
               text="View Our Services"
               bgClasses="bg-accent"
               arrowClasses="stroke-primary group-hover:stroke-content"
               to="/services"
             />
             <NavLinkButton
-              className="text-primary hover:text-content border-primary hover:border-accent active:border-accent hover:bg-accent active:bg-accent"
+              className="text-primary hover:text-content border-primary hover:border-accent active:border-accent hover:bg-accent active:bg-accent xl:self-start xl:space-x-4"
               text="View Our Homes"
               bgClasses="bg-accent"
               arrowClasses="stroke-primary group-hover:stroke-content"
@@ -218,7 +218,7 @@ const Landing = () => {
       </section>
 
       <section className="px-6 py-20 bg-accent space-y-8 md:px-20 lg:px-28 lg:py-36 lg:grid lg:grid-cols-2 lg:gap-x-20 lg:space-y-0">
-        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl">
+        <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:text-left">
           Answers To Some{' '}
           <span className="font-editorial_ul_italic">Popular Questions</span>
         </h2>

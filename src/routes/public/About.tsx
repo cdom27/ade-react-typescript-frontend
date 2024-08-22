@@ -30,7 +30,7 @@ const About = () => {
           We Never Forget Our Roots
         </h2>
 
-        <div className="lg:grid lg:grid-cols-2 lg:gap-x-20 lg:mt-20">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-x-20 lg:mt-20 xl:w-3/4 xl:mx-auto">
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/father-son.webp"
             alt="Beautiful home in San Diego made by Ade San Diego Home Builders"

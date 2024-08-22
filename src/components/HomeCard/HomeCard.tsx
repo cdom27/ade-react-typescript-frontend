@@ -26,7 +26,7 @@ const HomeCard = ({
           decoding="auto"
           role="img"
           aria-label={'Image for: ' + address}
-          className="rounded-xl object-cover"
+          className="rounded-xl object-cover xl:h-[366px]"
         />
       </NavLink>
 

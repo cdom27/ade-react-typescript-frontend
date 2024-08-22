@@ -73,15 +73,15 @@ const HomeDetails = () => {
           </div>
 
           <div className="lg:flex lg:justify-between">
-            <div className="pt-14 lg:w-1/3">
+            <div className="pt-14 lg:w-1/2">
               <h2 className="text-4xl font-editorial_ul text-left">
                 What&apos;s Special?
               </h2>
-              <ul className="grid grid-cols-1 gap-y-3 pt-6 text-sm sm:text-lg px-6 lg:flex-wrap lg:px-0">
+              <ul className="flex flex-col gap-y-3 pt-6 text-sm sm:text-lg px-6 lg:px-0 lg:flex-wrap xl:flex-row">
                 {home.whatsSpecial.map((item) => (
                   <li
                     key={item}
-                    className="font-fraktion_reg bg-content bg-opacity-20 rounded-full py-3 px-6 sm:w-3/4 sm:mx-auto lg:text-sm lg:py-2 lg:mx-0 lg:w-auto lg:self-start"
+                    className="font-fraktion_reg bg-content bg-opacity-20 rounded-full py-3 px-6 sm:w-3/4 sm:mx-auto lg:text-sm lg:py-2 lg:mx-0 lg:w-auto lg:self-start xl:mr-4"
                   >
                     {item}
                   </li>

@@ -3,11 +3,11 @@ import { links } from '../../utils/navUtils';
 
 const Footer = () => {
   return (
-    <footer className="px-6 py-20 text-center bg-leafs bg-cover md:px-20 lg:px-28 lg:py-36">
+    <footer className="px-6 py-20 text-center bg-leafs bg-cover md:px-20 lg:px-28 lg:py-36 lg:flex lg:flex-col">
       <h2 className="text-4xl font-editorial_ul_italic text-primary sm:text-5xl">
         Embrace San Diego With Ade
       </h2>
-      <ul className="flex flex-col gap-y-4 mt-16 lg:flex-row lg:justify-between">
+      <ul className="flex flex-col gap-y-4 mt-16 lg:flex-row lg:space-x-8 lg:mx-auto">
         {links.map((link) => (
           <li key={link.name}>
             <NavLink

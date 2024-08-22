@@ -51,9 +51,9 @@ const Services = () => {
               plans. Your home is your retreat, the place where you want to feel
               safe, comfortable, and inspired.
             </p>
-            <div className="flex flex-col gap-4 pt-8">
+            <div className="flex flex-col gap-4 pt-8 xl:flex-row">
               <NavLinkButton
-                className="text-content border-content hover:border-accent active:border-accent sm:text-xl"
+                className="text-content border-content hover:border-accent active:border-accent sm:text-xl lg:self-start lg:space-x-4"
                 text="Learn More"
                 bgClasses="bg-accent"
                 arrowClasses="stroke-content"
@@ -61,7 +61,7 @@ const Services = () => {
               />
 
               <NavLinkButton
-                className="text-content border-content hover:border-accent active:border-accent sm:text-xl"
+                className="text-content border-content hover:border-accent active:border-accent sm:text-xl lg:self-start lg:space-x-4"
                 text="Contact Us"
                 bgClasses="bg-accent"
                 arrowClasses="stroke-content"
@@ -70,7 +70,7 @@ const Services = () => {
             </div>
           </div>
 
-          <div>
+          <div className="xl:flex xl:flex-col">
             <h4 className="text-2xl font-editorial_ul pt-8 text-left sm:text-3xl">
               Dream Homes By Ade
             </h4>
@@ -86,7 +86,7 @@ const Services = () => {
               homes.
             </p>
             <NavLinkButton
-              className="text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content mt-8 sm:text-xl"
+              className="text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content mt-8 sm:text-xl lg:self-start lg:space-x-4"
               text="Find My Dream Home"
               bgClasses="bg-content"
               arrowClasses="stroke-content group-hover:stroke-primary"
@@ -106,9 +106,9 @@ const Services = () => {
               finding yourself short on storage or feeling cramped - many
               lifestyle changes can influence the need or desire for more space.
             </p>
-            <div className="flex flex-col gap-4 pt-8">
+            <div className="flex flex-col gap-4 pt-8 xl:flex-row">
               <NavLinkButton
-                className="text-content border-content hover:border-accent active:border-accent sm:text-xl"
+                className="text-content border-content hover:border-accent active:border-accent sm:text-xl lg:self-start lg:space-x-4"
                 text="Learn More"
                 bgClasses="bg-accent"
                 arrowClasses="stroke-content"
@@ -116,7 +116,7 @@ const Services = () => {
               />
 
               <NavLinkButton
-                className="text-content border-content hover:border-accent active:border-accent sm:text-xl"
+                className="text-content border-content hover:border-accent active:border-accent sm:text-xl lg:self-start lg:space-x-4"
                 text="Contact Us"
                 bgClasses="bg-accent"
                 arrowClasses="stroke-content"
