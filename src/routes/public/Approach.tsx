@@ -1,4 +1,4 @@
-import NavLinkButton from '../../components/Navigation/NavLinkButton';
+import NavButton from '../../components/Navigation/NavButton';
 import ProcessCard from '../../components/ProcessCard';
 import VideoHero from '../../components/VideoHero';
 import PageLayout from '../../layouts/PageLayout';
@@ -47,13 +47,9 @@ const Approach = () => {
                 Meet our charming lineup of homes, or work with us to create
                 your perfect multi-generational household.
               </p>
-              <NavLinkButton
-                className="text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content mt-8 lg:self-start lg:space-x-4 lg:mx-auto"
-                text="Find A Home"
-                bgClasses="bg-content"
-                arrowClasses="stroke-content group-hover:stroke-primary"
-                to="/homes"
-              />
+              <NavButton to="/homes" variant="accent">
+                Find A Home
+              </NavButton>
             </div>
           </div>
           <img
@@ -89,12 +85,12 @@ const Approach = () => {
       </section>
 
       <section className="bg-leafs bg-cover font-haas_roman bg-center h-full text-primary px-6 py-20 md:px-20 lg:px-28 lg:py-36 lg:grid-cols-2 lg:grid lg:gap-x-20">
-        <div className="xl:flex xl:flex-col">
+        <div className="flex flex-col space-y-8">
           <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:text-left 2xl:text-6xl 2xl:w-3/4">
             Fortify What&apos;s Good About{' '}
             <span className="font-editorial_ul_italic text-accent">Life</span>
           </h2>
-          <div className="pt-8 space-y-4 sm:text-xl">
+          <div className="space-y-4 sm:text-xl">
             <p>
               Finding the missing key to your home can shift your world from the
               inside out.
@@ -108,13 +104,7 @@ const Approach = () => {
               create a home that is uniquely yours.
             </p>
           </div>
-          <NavLinkButton
-            className="text-primary hover:text-content border-primary hover:border-accent active:border-accent hover:bg-accent active:bg-accent mt-8 sm:text-xl xl:self-start xl:space-x-4"
-            text="Learn More"
-            bgClasses="bg-accent"
-            arrowClasses="stroke-primary group-hover:stroke-content"
-            to="/approach"
-          />
+          <NavButton to="/services">Learn More</NavButton>
         </div>
         <div className="grid grid-cols-1 gap-y-8 pt-10">
           <img

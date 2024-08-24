@@ -1,10 +1,9 @@
 import PageLayout from '../../layouts/PageLayout';
 import VideoHero from '../../components/VideoHero';
-import NavLinkButton from '../../components/Navigation/NavLinkButton';
 import { Accordion, AccordionItem } from '../../components/Accordion';
-import { Arrow } from '../../components/Icons';
 import { NavLink } from 'react-router-dom';
 import ContactForm from '../../components/Forms/ContactForm';
+import NavButton from '../../components/Navigation/NavButton';
 
 const Landing = () => {
   //Hero sources
@@ -32,7 +31,7 @@ const Landing = () => {
         <VideoHero videoSources={videoSources} posterSource={posterSource} />
       </section>
 
-      <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28 lg:py-36">
+      <section className="px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28 lg:py-36 3xl:py-52">
         <div className="lg:flex lg:justify-between">
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/exp-1.webp"
@@ -73,7 +72,7 @@ const Landing = () => {
           className="hidden mx-auto rounded-lg max-w-[200px] mt-8 sm:max-w-[250px] lg:max-w-[400px] lg:block lg:mt-14"
         />
 
-        <div className="pt-8 gap-x-8 w-full md:mx-auto lg:w-4/5 lg:hidden">
+        <div className="grid cols-2 pt-8 gap-x-8 w-full md:mx-auto lg:w-4/5 lg:hidden">
           <img
             src="https://db36hfj0unq27.cloudfront.net/regular-content/exp-1.webp"
             alt="Beautiful home in San Diego made by Ade San Diego Home Builders"
@@ -92,15 +91,15 @@ const Landing = () => {
         </div>
       </section>
 
-      <section className="bg-leafs bg-cover font-haas_roman bg-center h-full text-primary px-6 py-20 md:px-20 lg:px-28 lg:py-36 lg:grid lg:grid-cols-2 lg:gap-x-20">
+      <section className="bg-leafs bg-cover font-haas_roman bg-center h-full text-primary px-6 py-20 md:px-20 lg:px-28 lg:py-36 lg:grid lg:grid-cols-2 lg:gap-x-20 3xl:py-52">
         <div>
-          <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:text-left 2xl:text-6xl">
+          <h2 className="text-4xl font-editorial_ul text-center sm:text-5xl lg:text-left 2xl:text-6xl 3xl:w-4/5">
             Embody The{' '}
             <span className="font-editorial_ul_italic text-accent">
               Vibrant Spirit of San Diego
             </span>
           </h2>
-          <div className="pt-8 space-y-4 sm:text-xl">
+          <div className="pt-8 space-y-4 sm:text-xl 3xl:w-4/5">
             <p>
               At Ade, we understand that you&apos;re building home than a house,
               you&apos;re building a home. It&apos;s more than just a structure,
@@ -114,20 +113,8 @@ const Landing = () => {
           </div>
 
           <div className="flex flex-col gap-4 pt-4 lg:pt-8 xl:flex-row">
-            <NavLinkButton
-              className="text-primary hover:text-content border-primary hover:border-accent active:border-accent hover:bg-accent active:bg-accent xl:self-start xl:space-x-4"
-              text="View Our Services"
-              bgClasses="bg-accent"
-              arrowClasses="stroke-primary group-hover:stroke-content"
-              to="/services"
-            />
-            <NavLinkButton
-              className="text-primary hover:text-content border-primary hover:border-accent active:border-accent hover:bg-accent active:bg-accent xl:self-start xl:space-x-4"
-              text="View Our Homes"
-              bgClasses="bg-accent"
-              arrowClasses="stroke-primary group-hover:stroke-content"
-              to="/homes"
-            />
+            <NavButton to="/services">View Our Services</NavButton>
+            <NavButton to="/homes">View Our Homes</NavButton>
           </div>
         </div>
 
@@ -264,16 +251,9 @@ const Landing = () => {
               .
             </AccordionItem>
           </Accordion>
-          <a
-            href="https://cidominguez.com/work"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative overflow-hidden font-fraktion_reg flex items-center justify-between text-md border-[2px] rounded-full px-9 py-4 transition-colors duration-300 ease-in-out text-content hover:text-accent border-content hover:border-content active:border-content hover:bg-content active:bg-content"
-          >
-            <span className="relative z-10 sm:text-xl">How Ade Was Made</span>
-            <Arrow className="size-7 relative z-10 transition-colors duration-300 ease-in-out stroke-content group-hover:stroke-accent rotate-[-45deg] lg:size-6" />
-            <div className="absolute inset-0 transform translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0 bg-content" />
-          </a>
+          <NavButton external to="https://cidominguez.com" variant="primary">
+            Learn How Ade Was Made
+          </NavButton>
         </div>
       </section>
     </PageLayout>

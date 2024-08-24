@@ -1,4 +1,4 @@
-import NavLinkButton from '../../components/Navigation/NavLinkButton';
+import NavButton from '../../components/Navigation/NavButton';
 import VideoHero from '../../components/VideoHero';
 import PageLayout from '../../layouts/PageLayout';
 
@@ -52,25 +52,16 @@ const Services = () => {
               safe, comfortable, and inspired.
             </p>
             <div className="flex flex-col gap-4 pt-8 xl:flex-row">
-              <NavLinkButton
-                className="text-content border-content hover:border-accent active:border-accent sm:text-xl lg:self-start lg:space-x-4"
-                text="Learn More"
-                bgClasses="bg-accent"
-                arrowClasses="stroke-content"
-                to="/approach"
-              />
-
-              <NavLinkButton
-                className="text-content border-content hover:border-accent active:border-accent sm:text-xl lg:self-start lg:space-x-4"
-                text="Contact Us"
-                bgClasses="bg-accent"
-                arrowClasses="stroke-content"
-                to="/contact"
-              />
+              <NavButton to="/approach" variant="secondary">
+                Learn More
+              </NavButton>
+              <NavButton to="/contact" variant="secondary">
+                Contact Us
+              </NavButton>
             </div>
           </div>
 
-          <div className="xl:flex xl:flex-col">
+          <div>
             <h4 className="text-2xl font-editorial_ul pt-8 text-left sm:text-3xl">
               Dream Homes By Ade
             </h4>
@@ -85,13 +76,11 @@ const Services = () => {
               timeless Southern Californian appeal with our ready-to-move-in
               homes.
             </p>
-            <NavLinkButton
-              className="text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content mt-8 sm:text-xl lg:self-start lg:space-x-4"
-              text="Find My Dream Home"
-              bgClasses="bg-content"
-              arrowClasses="stroke-content group-hover:stroke-primary"
-              to="/homes"
-            />
+            <div className="flex flex-col gap-4 pt-8 xl:flex-row">
+              <NavButton to="/homes" variant="accent">
+                Find My Dream Home
+              </NavButton>
+            </div>
           </div>
 
           <div>
@@ -107,21 +96,12 @@ const Services = () => {
               lifestyle changes can influence the need or desire for more space.
             </p>
             <div className="flex flex-col gap-4 pt-8 xl:flex-row">
-              <NavLinkButton
-                className="text-content border-content hover:border-accent active:border-accent sm:text-xl lg:self-start lg:space-x-4"
-                text="Learn More"
-                bgClasses="bg-accent"
-                arrowClasses="stroke-content"
-                to="/approach"
-              />
-
-              <NavLinkButton
-                className="text-content border-content hover:border-accent active:border-accent sm:text-xl lg:self-start lg:space-x-4"
-                text="Contact Us"
-                bgClasses="bg-accent"
-                arrowClasses="stroke-content"
-                to="/contact"
-              />
+              <NavButton to="/approach" variant="secondary">
+                Learn More
+              </NavButton>
+              <NavButton to="/contact" variant="secondary">
+                Contact Us
+              </NavButton>
             </div>
           </div>
         </div>

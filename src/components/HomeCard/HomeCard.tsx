@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { HomeCardDTO } from '../../types/api';
-import NavLinkButton from '../Navigation/NavLinkButton';
+import NavButton from '../Navigation/NavButton';
 
 interface Props extends HomeCardDTO {}
 
@@ -26,7 +26,7 @@ const HomeCard = ({
           decoding="auto"
           role="img"
           aria-label={'Image for: ' + address}
-          className="rounded-xl object-cover xl:h-[366px]"
+          className="rounded-xl object-cover xl:h-[366px] 2xl:w-full"
         />
       </NavLink>
 
@@ -47,14 +47,10 @@ const HomeCard = ({
         <li>{bathrooms} Bath</li>
       </ul>
 
-      <div className="sm:mt-auto">
-        <NavLinkButton
-          className="text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content mt-8 sm:text-xl"
-          text="View Details"
-          bgClasses="bg-content"
-          arrowClasses="stroke-content group-hover:stroke-primary"
-          to={`/homes/${id}`}
-        />
+      <div className="mt-8 sm:mt-auto">
+        <NavButton to={`/homes/${id}`} variant="accent">
+          View Details
+        </NavButton>
       </div>
     </div>
   );

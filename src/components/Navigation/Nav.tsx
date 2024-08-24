@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { NavLink } from 'react-router-dom';
 import { Arrow } from '../Icons';
-import NavLinkButton from './NavLinkButton';
+import NavButton from './NavButton';
 import { links } from '../../utils/navUtils';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -124,13 +124,9 @@ const Nav = () => {
             </li>
           ))}
           <li ref={(el) => (listItemRef.current[links.length] = el)}>
-            <NavLinkButton
-              className="text-accent hover:text-content border-none bg-content hover:bg-accent active:bg-accent px-6 py-2 lg:space-x-2"
-              text="GET IN TOUCH"
-              to="/contact"
-              bgClasses="bg-accent"
-              arrowClasses="stroke-accent group-hover:stroke-content rotate-[-45deg] lg:mt-1"
-            />
+            <NavButton to="/contact" variant="primary">
+              GET IN TOUCH
+            </NavButton>
           </li>
         </ul>
       </div>
@@ -162,14 +158,13 @@ const Nav = () => {
             </NavLink>
           </li>
         ))}
-        <li ref={(el) => (listItemRef.current[links.length] = el)}>
-          <NavLinkButton
-            className="text-accent hover:text-content border-none bg-content hover:bg-accent active:bg-accent text-lg px-6 py-2 mt-8 sm:text-xl sm:w-4/5 sm:mx-auto"
-            text="GET IN TOUCH"
-            to="/contact"
-            bgClasses="bg-accent"
-            arrowClasses="stroke-accent group-hover:stroke-content rotate-[-45deg]"
-          />
+        <li
+          ref={(el) => (listItemRef.current[links.length] = el)}
+          className="text-[16px] sm:w-4/5 sm:mx-auto"
+        >
+          <NavButton to="/contact" variant="primary">
+            GET IN TOUCH
+          </NavButton>
         </li>
       </ul>
     </nav>

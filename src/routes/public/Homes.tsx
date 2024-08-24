@@ -86,7 +86,7 @@ const Homes = () => {
           Dream Homes By Ade
         </h3>
 
-        <div className="space-y-16 pb-28 pt-10 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-16 sm:space-y-0 lg:gap-x-20 lg:pt-24 xl:w-5/6 xl:mx-auto xl:gap-x-10 2xl:px-20 2xl:gap-y-24">
+        <div className="space-y-16 pb-28 pt-10 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-16 sm:space-y-0 lg:gap-x-20 lg:pt-24 xl:w-5/6 xl:mx-auto xl:gap-x-10 2xl:px-20 2xl:gap-y-24 3xl:grid-cols-3">
           {homes.map((home) => (
             <HomeCard key={home.id} {...home} />
           ))}

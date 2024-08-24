@@ -1,4 +1,4 @@
-import NavLinkButton from '../../components/Navigation/NavLinkButton';
+import NavButton from '../../components/Navigation/NavButton';
 import VideoHero from '../../components/VideoHero';
 import PageLayout from '../../layouts/PageLayout';
 
@@ -55,28 +55,17 @@ const About = () => {
               </p>
             </div>
             <div className="flex flex-col gap-4 pt-8">
-              <NavLinkButton
-                className="text-content bg-accent hover:bg-content active:bg-content hover:text-primary active:text-primary border-accent hover:border-content active:border-content sm:text-xl"
-                text="View Our Homes"
-                bgClasses="bg-content"
-                arrowClasses="stroke-content group-hover:stroke-primary"
-                to="/homes"
-              />
-              <NavLinkButton
-                className="text-content border-content hover:border-accent active:border-accent sm:text-xl"
-                text="View Our Services"
-                bgClasses="bg-accent"
-                arrowClasses="stroke-content"
-                to="/services"
-              />
+              <NavButton to="/homes" variant="accent">
+                View Our Homes
+              </NavButton>
 
-              <NavLinkButton
-                className="text-content border-content hover:border-accent active:border-accent sm:text-xl"
-                text="Contact Us"
-                bgClasses="bg-accent"
-                arrowClasses="stroke-content"
-                to="/contact"
-              />
+              <NavButton to="/services" variant="secondary">
+                View Our Services
+              </NavButton>
+
+              <NavButton to="/contact" variant="secondary">
+                Contact Us
+              </NavButton>
             </div>
           </div>
         </div>
