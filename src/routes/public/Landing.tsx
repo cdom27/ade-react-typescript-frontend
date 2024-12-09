@@ -251,7 +251,7 @@ const Landing = () => {
               .
             </AccordionItem>
           </Accordion>
-          <NavButton external to='https://cidominguez.com' variant='primary'>
+          <NavButton external to='https://cidominguez.com' variant='tertiary'>
             Learn How Ade Was Made
           </NavButton>
         </div>
