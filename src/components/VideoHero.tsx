@@ -8,7 +8,7 @@ import useDeviceDetect from '../hooks/useDeviceDetect';
 
 interface VideoSources {
   tablet: {
-    webm: string;
+    webm: string | null;
     mp4: string;
   };
   desktop: {
@@ -65,18 +65,18 @@ const VideoHero = ({ videoSources, posterSource }: VideoHeroProps) => {
   const { webm, mp4 } = getVideoSources();
 
   return (
-    <div className="overflow-hidden h-screen w-full">
+    <div className='overflow-hidden h-screen w-full'>
       <video
-        className="h-screen object-cover w-full"
+        className='h-screen object-cover w-full'
         autoPlay
         muted
         playsInline
-        preload="metadata"
+        preload='metadata'
         poster={posterSource}
         onEnded={handleVideoEnded}
       >
-        {canPlayWebm && <source src={webm} type="video/webm" />}
-        <source src={mp4} type="video/mp4" />
+        {canPlayWebm && <source src={webm || undefined} type='video/webm' />}
+        <source src={mp4} type='video/mp4' />
         Your browser does not support the video tag.
       </video>
     </div>

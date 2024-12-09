@@ -3,15 +3,14 @@ import VideoHero from '../../components/VideoHero';
 import PageLayout from '../../layouts/PageLayout';
 
 const Services = () => {
-  //Hero sources
   const videoSources = {
     tablet: {
-      webm: '', // No WebM for tablet/mobile
+      webm: null, // No WebM for tablet/mobile
       mp4: `https://db36hfj0unq27.cloudfront.net/hero-videos/services-hero-720.mp4`,
     },
     desktop: {
       webm: `https://db36hfj0unq27.cloudfront.net/hero-videos/services-hero-1080.webm`,
-      mp4: `https://db36hfj0unq27.cloudfront.net/hero-videos/services-hero-720.mp4`, // Fallback Mp4 for desktop
+      mp4: `https://db36hfj0unq27.cloudfront.net/hero-videos/services-hero-720.mp4`,
     },
   };
 

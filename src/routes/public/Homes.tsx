@@ -18,15 +18,14 @@ const Homes = () => {
     threshold: 0.1,
   });
 
-  //Hero sources
   const videoSources = {
     tablet: {
-      webm: '', // No WebM for tablet/mobile
+      webm: null, // No WebM for tablet/mobile
       mp4: `https://db36hfj0unq27.cloudfront.net/hero-videos/homes-hero-720.mp4`,
     },
     desktop: {
       webm: `https://db36hfj0unq27.cloudfront.net/hero-videos/homes-hero-1080.webm`,
-      mp4: `https://db36hfj0unq27.cloudfront.net/hero-videos/homes-hero-720.mp4`, // Fallback Mp4 for desktop
+      mp4: `https://db36hfj0unq27.cloudfront.net/hero-videos/homes-hero-720.mp4`,
     },
   };
 

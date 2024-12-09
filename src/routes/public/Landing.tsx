@@ -6,15 +6,14 @@ import ContactForm from '../../components/Forms/ContactForm';
 import NavButton from '../../components/Navigation/NavButton';
 
 const Landing = () => {
-  //Hero sources
   const videoSources = {
     tablet: {
-      webm: '', // No WebM for tablet/mobile
+      webm: null, // No WebM for tablet/mobile
       mp4: `https://db36hfj0unq27.cloudfront.net/hero-videos/landing-hero-720.mp4`,
     },
     desktop: {
       webm: `https://db36hfj0unq27.cloudfront.net/hero-videos/landing-hero-1080.webm`,
-      mp4: `https://db36hfj0unq27.cloudfront.net/hero-videos/landing-hero-720.mp4`, // Fallback Mp4 for desktop
+      mp4: `https://db36hfj0unq27.cloudfront.net/hero-videos/landing-hero-720.mp4`,
     },
   };
 
