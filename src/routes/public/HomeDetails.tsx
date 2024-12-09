@@ -7,6 +7,80 @@ import VisitRequestModalForm from '../../components/Forms/VisitRequestModalForm'
 import { Arrow } from '../../components/Icons';
 import { Accordion, AccordionItem } from '../../components/Accordion';
 
+const HomeDetailsSkeleton = () => {
+  return (
+    <PageLayout>
+      <section className='px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28 lg:py-36 4xl:px-72 animate-pulse'>
+        <div className='flex flex-col justify-between space-y-8 lg:text-left pt-12 2xl:flex-row 2xl:gap-10 2xl:space-y-0'>
+          {/* Image Skeleton */}
+          <div className='overflow-hidden h-[350px] sm:h-[450px] bg-gray-300 rounded-xl block 2xl:hidden' />
+          <div className='flex flex-col xl:w-1/2 space-y-6'>
+            {/* Title Skeleton */}
+            <div className='h-[48px] w-3/4 bg-gray-300 rounded-xl' />
+            {/* Overview Skeleton */}
+            <div className='h-[24px] w-full bg-gray-300 rounded-xl' />
+            <div className='h-[24px] w-2/3 bg-gray-300 rounded-xl' />
+            {/* What's Special Section Skeleton */}
+            <div className='pt-14 space-y-4'>
+              <div className='h-[36px] w-1/3 bg-gray-300 rounded-xl' />
+              <div className='flex flex-wrap gap-y-3 pt-6'>
+                {[...Array(4)].map((_, index) => (
+                  <div
+                    key={index}
+                    className='h-[32px] w-[120px] bg-gray-300 rounded-full'
+                  />
+                ))}
+              </div>
+            </div>
+            <div className='pt-14 space-y-4'>
+              <div className='h-[36px] w-1/3 bg-gray-300 rounded-xl' />
+              <div className='grid grid-cols-2 gap-x-3 mt-6'>
+                {[...Array(6)].map((_, index) => (
+                  <div
+                    key={index}
+                    className='h-[24px] w-full bg-gray-300 rounded-xl'
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='px-6 pb-20 font-haas_roman text-left md:px-20 lg:px-28 lg:pb-36 4xl:px-72 animate-pulse'>
+        <div className='space-y-8'>
+          <div className='h-[36px] w-[200px] bg-gray-300 rounded-xl' />
+          {[...Array(3)].map((_, index) => (
+            <div key={index} className='space-y-4'>
+              <div className='h-[28px] w-[150px] bg-gray-300 rounded-xl' />
+              {[...Array(3)].map((_, subIndex) => (
+                <div
+                  key={subIndex}
+                  className='h-[20px] w-full bg-gray-300 rounded-xl'
+                />
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className='px-6 pb-20 font-haas_roman text-left md:px-20 lg:px-28 lg:pb-36 4xl:px-72 animate-pulse'>
+        <div className='space-y-8'>
+          <div className='h-[36px] w-[200px] bg-gray-300 rounded-xl' />
+          <div className='gap-x grid grid-cols-1 sm:grid-cols-2 sm:gap-x lg:grid-cols-3 xl:grid-cols-4 4xl:grid-cols-5 gap-y'>
+            {[...Array(8)].map((_, index) => (
+              <div
+                key={index}
+                className='h-[228px] w-full bg-gray-300 rounded-lg'
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    </PageLayout>
+  );
+};
+
 const HomeDetails = () => {
   const { homeId } = useParams<{ homeId: string }>();
   const [home, setHome] = useState<HomeDetailsDTO | null>(null);
@@ -33,18 +107,7 @@ const HomeDetails = () => {
 
   if (error) return <p>{error}</p>;
 
-  //Loading state
-  if (loading)
-    return (
-      <PageLayout>
-        <section className='relative'>
-          <h1 className='absolute text-center inset-0 flex flex-col items-center justify-center z-10 text-4xl font-editorial_ul text-primary mt-20 px-6 sm:text-5xl'>
-            Loading Home Details
-          </h1>
-          <div className='h-[400px] bg-content' />
-        </section>
-      </PageLayout>
-    );
+  if (loading) return <HomeDetailsSkeleton />;
 
   if (home)
     return (
@@ -65,7 +128,7 @@ const HomeDetails = () => {
                 {home.address}
               </h1>
               <p className='sm:text-xl lg:w-2/3'>{home.overview}</p>
-              <div className='flex flex-row justify-between xl:flex-col'>
+              <div className='flex flex-col lg:flex-row justify-between xl:flex-col'>
                 <div className='pt-14'>
                   <h2 className='text-4xl font-editorial_ul text-left'>
                     What&apos;s Special?
