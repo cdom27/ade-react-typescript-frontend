@@ -2,5 +2,4 @@
 
 DO LIST:
 
-- image gallery view
 - update date picker for visit form
