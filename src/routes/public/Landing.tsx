@@ -224,7 +224,7 @@ const Landing = () => {
                 rel='noopener noreferrer'
                 className='underline font-haas_md'
               >
-                portfolio.
+                portfolio
               </a>
               .
             </AccordionItem>
