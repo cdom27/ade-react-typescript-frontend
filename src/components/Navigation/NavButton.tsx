@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { Arrow } from '../Icons';
 
 type ButtonProps = {
-  variant?: 'default' | 'primary' | 'accent' | 'secondary';
+  variant?: 'default' | 'primary' | 'accent' | 'secondary' | 'tertiary';
   to: string;
   external?: boolean;
   children: React.ReactNode;
@@ -36,6 +36,11 @@ const NavButton = ({
       arrow: 'stroke-content',
       bg: 'bg-accent',
     },
+    tertiary: {
+      main: 'text-accent hover:text-content border-content bg-content hover:bg-accent active:bg-accent xl:self-start',
+      arrow: 'stroke-accent group-hover:stroke-content',
+      bg: 'bg-accent',
+    },
   };
 
   return (
@@ -45,7 +50,7 @@ const NavButton = ({
       rel={external ? 'noopener noreferrer' : undefined}
       className={`group relative overflow-hidden font-fraktion_reg flex items-center justify-between text-md border-[2px] rounded-full px-9 py-4 transition-colors duration-300 ease-in-out ${variants[variant].main}`}
     >
-      <span className="relative z-10 lg:mr-4">{children}</span>
+      <span className='relative z-10 lg:mr-4'>{children}</span>
       <Arrow
         className={`size-5 relative z-10 transition-colors duration-300 ease-in-out ${
           variants[variant].arrow
