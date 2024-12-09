@@ -104,7 +104,7 @@ const Nav = () => {
           {isOpen ? 'CLOSE' : 'MENU'}
         </button>
         <ul className='hidden lg:flex lg:space-x-8 lg:items-center'>
-          {links.map((link, index) => (
+          {links.map((link) => (
             <li
               key={link.href}
               ref={(el) => {
@@ -144,7 +144,7 @@ const Nav = () => {
           isOpen ? 'flex flex-col' : 'hidden'
         }`}
       >
-        {links.map((link, index) => (
+        {links.map((link) => (
           <li
             key={link.href}
             ref={(el) => {
