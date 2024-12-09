@@ -107,7 +107,9 @@ const Nav = () => {
           {links.map((link, index) => (
             <li
               key={link.href}
-              ref={(el) => (listItemRef.current[index] = el)}
+              ref={(el) => {
+                listItemRef.current[links.length] = el;
+              }}
               className='self-start my-auto'
             >
               <NavLink
@@ -123,7 +125,11 @@ const Nav = () => {
               </NavLink>
             </li>
           ))}
-          <li ref={(el) => (listItemRef.current[links.length] = el)}>
+          <li
+            ref={(el) => {
+              listItemRef.current[links.length] = el;
+            }}
+          >
             <NavButton to='/contact' variant='primary'>
               GET IN TOUCH
             </NavButton>
@@ -141,7 +147,9 @@ const Nav = () => {
         {links.map((link, index) => (
           <li
             key={link.href}
-            ref={(el) => (listItemRef.current[index] = el)}
+            ref={(el) => {
+              listItemRef.current[links.length] = el;
+            }}
             className='border-b-[1px] border-content pb-4'
           >
             <NavLink
@@ -159,7 +167,9 @@ const Nav = () => {
           </li>
         ))}
         <li
-          ref={(el) => (listItemRef.current[links.length] = el)}
+          ref={(el) => {
+            listItemRef.current[links.length] = el;
+          }}
           className='text-[16px] sm:w-4/5 sm:mx-auto'
         >
           <NavButton to='/contact' variant='primary'>
