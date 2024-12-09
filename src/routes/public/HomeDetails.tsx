@@ -6,21 +6,27 @@ import { HomeDetailsDTO } from '../../types/api';
 import VisitRequestModalForm from '../../components/Forms/VisitRequestModalForm';
 import { Arrow } from '../../components/Icons';
 import { Accordion, AccordionItem } from '../../components/Accordion';
+import Lightbox from 'yet-another-react-lightbox';
+import {
+  Counter,
+  Fullscreen,
+  Thumbnails,
+  Zoom,
+} from 'yet-another-react-lightbox/plugins';
+import 'yet-another-react-lightbox/styles.css';
+import 'yet-another-react-lightbox/plugins/counter.css';
+import 'yet-another-react-lightbox/plugins/thumbnails.css';
 
 const HomeDetailsSkeleton = () => {
   return (
     <PageLayout>
       <section className='px-6 py-20 font-haas_roman text-center md:px-20 lg:px-28 lg:py-36 4xl:px-72 animate-pulse'>
         <div className='flex flex-col justify-between space-y-8 lg:text-left pt-12 2xl:flex-row 2xl:gap-10 2xl:space-y-0'>
-          {/* Image Skeleton */}
           <div className='overflow-hidden h-[350px] sm:h-[450px] bg-gray-300 rounded-xl block 2xl:hidden' />
           <div className='flex flex-col xl:w-1/2 space-y-6'>
-            {/* Title Skeleton */}
             <div className='h-[48px] w-3/4 bg-gray-300 rounded-xl' />
-            {/* Overview Skeleton */}
             <div className='h-[24px] w-full bg-gray-300 rounded-xl' />
             <div className='h-[24px] w-2/3 bg-gray-300 rounded-xl' />
-            {/* What's Special Section Skeleton */}
             <div className='pt-14 space-y-4'>
               <div className='h-[36px] w-1/3 bg-gray-300 rounded-xl' />
               <div className='flex flex-wrap gap-y-3 pt-6'>
@@ -87,6 +93,8 @@ const HomeDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const fetchHomeDetails = async () => {
@@ -121,7 +129,11 @@ const HomeDetails = () => {
               decoding='auto'
               role='img'
               aria-label={`Image of ${home.address}`}
-              className='overflow-hidden h-[350px] object-cover sm:h-[450px] rounded-xl block 2xl:hidden'
+              className='overflow-hidden h-[350px] object-cover sm:h-[450px] rounded-xl block 2xl:hidden hover:cursor-pointer'
+              onClick={() => {
+                setCurrentImageIndex(0);
+                setIsLightboxOpen(true);
+              }}
             />
             <div className='flex flex-col xl:w-1/2'>
               <h1 className='text-4xl font-editorial_ul text-content sm:text-5xl 2xl:text-6xl'>
@@ -167,7 +179,11 @@ const HomeDetails = () => {
                 decoding='auto'
                 role='img'
                 aria-label={`Image of ${home.address}`}
-                className='overflow-hidden h-[350px] object-cover sm:h-[450px] rounded-xl hidden 2xl:block'
+                className='overflow-hidden h-[350px] object-cover sm:h-[450px] rounded-xl hidden 2xl:block hover:cursor-pointer'
+                onClick={() => {
+                  setCurrentImageIndex(0);
+                  setIsLightboxOpen(true);
+                }}
               />
               <button
                 onClick={() => setIsModalOpen(true)}
@@ -261,19 +277,32 @@ const HomeDetails = () => {
 
         <section className='px-6 pb-20 font-haas_roman text-left md:px-20 lg:px-28 lg:pb-36 4xl:px-72'>
           <h2 className='text-4xl font-editorial_ul text-left pb-2'>
-            Home Gallery
+            Home Gallery{' '}
+            <button
+              onClick={() => {
+                setCurrentImageIndex(0);
+                setIsLightboxOpen(true);
+              }}
+              className='font-haas_roman text-lg underline pl-2'
+            >
+              Open Gallery View
+            </button>
           </h2>
           <div className='gap-4 grid grid-cols-1 mt-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 xl:grid-cols-4 4xl:grid-cols-5'>
-            {home.photoGallery.map((photo) => (
+            {home.photoGallery.map((photo, index) => (
               <img
-                key={photo}
+                key={index}
                 src={photo}
                 alt={`Image of ${home.address}`}
                 loading='lazy'
                 decoding='async'
                 role='img'
                 aria-label={`Image of ${home.address}`}
-                className='rounded-lg object-cover 2xl:w-full 2xl:h-[228px]'
+                className='rounded-lg object-cover 2xl:w-full 2xl:h-[228px] hover:cursor-pointer'
+                onClick={() => {
+                  setCurrentImageIndex(index);
+                  setIsLightboxOpen(true);
+                }}
               />
             ))}
           </div>
@@ -282,6 +311,25 @@ const HomeDetails = () => {
         <VisitRequestModalForm
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
+        />
+
+        <Lightbox
+          open={isLightboxOpen}
+          close={() => {
+            setCurrentImageIndex(0);
+            setIsLightboxOpen(false);
+          }}
+          index={currentImageIndex}
+          slides={home.photoGallery.map((photoUrl) => ({ src: photoUrl }))}
+          plugins={[Counter, Fullscreen, Zoom, Thumbnails]}
+          styles={{
+            container: {
+              backgroundColor: 'rgba(0, 0, 0, 0.9)',
+            },
+            thumbnailsContainer: {
+              backgroundColor: 'rgba(0, 0, 0, 0.9)',
+            },
+          }}
         />
       </PageLayout>
     );
