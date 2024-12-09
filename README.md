@@ -2,7 +2,7 @@
 
 DO LIST:
 
-fix button variant in faq
-image gallery view
-loading state for home details
-update date picker for visit form
+- image gallery view
+- loading state for home details
+- update date picker for visit form
+- fix home details whats special and quick details layout for smaller devices
