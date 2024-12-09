@@ -116,7 +116,7 @@ const Nav = () => {
                 to={link.href}
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `${
+                  `hover:text-lime-800 hover:underline ${
                     isActive ? 'text-lime-700' : 'text-content'
                   } font-fraktion_reg text-md`
                 }
