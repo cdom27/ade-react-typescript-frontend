@@ -90,25 +90,25 @@ const Nav = () => {
   return (
     <nav
       ref={navRef}
-      className="bg-primary border-content border-[1px] border-opacity-20 fixed top-4 left-6 right-6 z-50 py-4 px-8 rounded-md text-content md:left-20 md:right-20 lg:left-28 lg:right-28"
+      className='bg-primary border-content border-[1px] border-opacity-20 fixed top-4 left-6 right-6 z-50 py-4 px-8 rounded-md text-content md:left-20 md:right-20 lg:left-28 lg:right-28 4xl:left-72 4xl:right-72'
     >
-      <div className="flex items-center justify-between">
-        <NavLink to="/">
-          <h1 className="font-editorial_ul_italic text-4xl">Ade</h1>
+      <div className='flex items-center justify-between'>
+        <NavLink to='/'>
+          <h1 className='font-editorial_ul_italic text-4xl'>Ade</h1>
         </NavLink>
         <button
-          type="button"
+          type='button'
           onClick={() => setIsOpen(!isOpen)}
-          className="font-fraktion_reg text-sm sm:text-xl lg:hidden"
+          className='font-fraktion_reg text-sm sm:text-xl lg:hidden'
         >
           {isOpen ? 'CLOSE' : 'MENU'}
         </button>
-        <ul className="hidden lg:flex lg:space-x-8 lg:items-center">
+        <ul className='hidden lg:flex lg:space-x-8 lg:items-center'>
           {links.map((link, index) => (
             <li
               key={link.href}
               ref={(el) => (listItemRef.current[index] = el)}
-              className="self-start my-auto"
+              className='self-start my-auto'
             >
               <NavLink
                 to={link.href}
@@ -124,7 +124,7 @@ const Nav = () => {
             </li>
           ))}
           <li ref={(el) => (listItemRef.current[links.length] = el)}>
-            <NavButton to="/contact" variant="primary">
+            <NavButton to='/contact' variant='primary'>
               GET IN TOUCH
             </NavButton>
           </li>
@@ -142,7 +142,7 @@ const Nav = () => {
           <li
             key={link.href}
             ref={(el) => (listItemRef.current[index] = el)}
-            className="border-b-[1px] border-content pb-4"
+            className='border-b-[1px] border-content pb-4'
           >
             <NavLink
               to={link.href}
@@ -154,15 +154,15 @@ const Nav = () => {
               }
             >
               <span>{link.name}</span>
-              <Arrow className="stroke-content size-4" />
+              <Arrow className='stroke-content size-4' />
             </NavLink>
           </li>
         ))}
         <li
           ref={(el) => (listItemRef.current[links.length] = el)}
-          className="text-[16px] sm:w-4/5 sm:mx-auto"
+          className='text-[16px] sm:w-4/5 sm:mx-auto'
         >
-          <NavButton to="/contact" variant="primary">
+          <NavButton to='/contact' variant='primary'>
             GET IN TOUCH
           </NavButton>
         </li>
