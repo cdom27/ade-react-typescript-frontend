@@ -1,7 +1,7 @@
 import PageLayout from '../../layouts/PageLayout';
 import VideoHero from '../../components/VideoHero';
 import { Accordion, AccordionItem } from '../../components/Accordion';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
 import ContactForm from '../../components/Forms/ContactForm';
 import NavButton from '../../components/Navigation/NavButton';
 

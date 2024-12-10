@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import PageLayout from '../../layouts/PageLayout';
 import api from '../../api/axios';
 import { HomeDetailsDTO } from '../../types/api';

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
 import { Arrow } from '../Icons';
 import NavButton from './NavButton';
 import { links } from '../../utils/navUtils';

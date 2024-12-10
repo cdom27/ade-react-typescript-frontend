@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { ScrollRestoration } from 'react-router-dom';
+import { ScrollRestoration } from 'react-router';
 import Nav from '../components/Navigation/Nav';
 import Footer from '../components/Navigation/Footer';
 

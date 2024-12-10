@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import * as Yup from 'yup';
 import api from '../../api/axios';
 import { Formik, Form, ErrorMessage } from 'formik';

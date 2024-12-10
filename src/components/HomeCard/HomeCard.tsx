@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
 import { HomeCardDTO } from '../../types/api';
 import NavButton from '../Navigation/NavButton';
 
