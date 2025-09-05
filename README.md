@@ -1,6 +1,6 @@
 # 🏡Ade - React Frontend
 
-The frontend for [Ade](https://ade.cidominguez.com) is a React 19 application designed to provide an intuitive user interface for a fictional construction company. Users can explore marketing information, view homes for sale, submit contact forms, and schedule visits. The frontend communicates seamlessly with a [Spring-based REST API](https://github.com/ci-dominguez/ade-backend) on the backend to deliver a smooth and fast experience.
+The frontend for Ade is a React 19 application designed to provide an intuitive user interface for a fictional construction company. Users can explore marketing information, view homes for sale, submit contact forms, and schedule visits. The frontend communicates seamlessly with a [Spring-based REST API](https://github.com/ci-dominguez/ade-backend) on the backend to deliver a smooth and fast experience.
 
 ## ✨ Features
 
